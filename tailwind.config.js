@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         myfont: ['Ranade', 'sans-serif'],
+        clashfont: ['Clash', 'sans-serif']
       },
     },
   },
