@@ -1,15 +1,18 @@
-import Herosection from "./components/Herosection/herosection"
-import Header from "./components/Header/header"
+import SmoothScroll from "./components/SmoothScroll"
 import Aboutsection from "./components/AboutSection/about"
-import './index.css'
+import Header from "./components/Header/header"
+import Herosection from "./components/Herosection/herosection"
+import "./index.css"
 
 function App() {
   return (
-    <div>
-      <Header></Header>
-      <Herosection></Herosection>
-      <Aboutsection></Aboutsection>
-    </div>
+    <SmoothScroll>
+      <div>
+        <Header></Header>
+        <Herosection></Herosection>
+        <Aboutsection></Aboutsection>
+      </div>
+    </SmoothScroll>
   )
 }
 

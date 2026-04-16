@@ -1,40 +1,118 @@
+import { motion as Motion } from "framer-motion"
+
 const Aboutsection = () => {
+    const fadeUp = {
+        hidden: { opacity: 0, y: 22 },
+        show: (delay = 0) => ({
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] },
+        }),
+    }
+
     return (
         <section className="w-full border-t border-neutral-200 py-24">
             <div className="mx-auto max-w-6xl px-6">
-                <div className="flex flex-col gap-14">
-                    <div className="max-w-3xl">
-                        <h2 className="m-0 font-myfont text-[clamp(2.5rem,4.8vw,4.5rem)] leading-[1.1] text-neutral-900">
-                            Who we are ?
-                        </h2>
+                <div className="grid items-start gap-14 md:grid-cols-12">
+                    <div className="md:col-span-7">
+                        <Motion.h2
+                            className="font-myfont m-0 max-w-full text-[clamp(2.4rem,4.6vw,4.25rem)] font-bold leading-[0.95] tracking-[-0.02em] text-neutral-900 whitespace-nowrap"
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.7 }}
+                            variants={fadeUp}
+                            custom={0}
+                        >
+                            More than just capital.
+                        </Motion.h2>
 
-                        <p className="mt-5 text-[18px] leading-relaxed text-neutral-600">
-                            We&apos;re a venture studio that partners with founders to take ideas from
-                            zero to one and scale them with strategy, capital, and execution.
-                        </p>
+                        <Motion.p
+                            className="mt-10 max-w-[60ch] whitespace-pre-line text-[16px] leading-relaxed text-neutral-600 md:text-[18px]"
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.6 }}
+                            variants={fadeUp}
+                            custom={0.12}
+                        >
+                            {`Ryleni works with early stage and growth 
+stage ventures to bring clarity, direction, and
+investor readiness to their journey. The firm
+actively supports startups in fundraising by
+structuring financials, aligning them with the
+right investors, and participating in deal
+execution.`}
+                        </Motion.p>
+
+                        <Motion.p
+                            className="mt-8 max-w-[60ch] whitespace-pre-line text-[16px] leading-relaxed text-neutral-600 md:text-[18px]"
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.6 }}
+                            variants={fadeUp}
+                            custom={0.18}
+                        >
+                            {`Through its portfolio, Ryleni has
+contributed across sectors, supporting
+product development, operational
+improvements, and capital access with a
+practical, results-driven approach.`}
+                        </Motion.p>
+
+                        <Motion.ul
+                            className="mt-12 flex flex-col gap-4 text-neutral-800"
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true, amount: 0.6 }}
+                            variants={fadeUp}
+                            custom={0.24}
+                        >
+                            <li className="flex items-center gap-3">
+                                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span className="font-medium text-[16px] md:text-[18px]">Access to our partnering & design team</span>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span className="font-medium text-[16px] md:text-[18px]">Deep expertise across industries</span>
+                            </li>
+                            <li className="flex items-center gap-3">
+                                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span className="font-medium text-[16px] md:text-[18px]">Close a Series A within 6 months</span>
+                            </li>
+                        </Motion.ul>
                     </div>
 
-                    <div className="grid gap-6 md:grid-cols-3">
-                        <div className="rounded-2xl bg-white p-6">
-                            <h3 className="font-myfont text-[20px] text-neutral-900">Build</h3>
-                            <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">
-                                Product, brand, and systems designed to ship fast and iterate
-                                faster.
-                            </p>
-                        </div>
+                    <div className="md:col-span-5 md:mt-24">
+                        <div className="flex flex-col gap-8">
+                            <Motion.div
+                                className="relative overflow-hidden rounded-3xl bg-neutral-100"
+                                initial={{ opacity: 0, scale: 1.03 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true, amount: 0.35 }}
+                                transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                            >
+                                <div className="aspect-[3/4] w-full" />
+                                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_30%_30%,rgba(79,70,229,0.22),transparent_60%),radial-gradient(60%_55%_at_70%_70%,rgba(17,24,39,0.10),transparent_55%)]" />
+                                <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5" />
+                            </Motion.div>
 
-                        <div className="rounded-2xl bg-white p-6">
-                            <h3 className="font-myfont text-[20px] text-neutral-900">Fund</h3>
-                            <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">
-                                Capital planning and fundraising support aligned to your stage.
-                            </p>
-                        </div>
-
-                        <div className="rounded-2xl bg-white p-6">
-                            <h3 className="font-myfont text-[20px] text-neutral-900">Scale</h3>
-                            <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">
-                                Growth strategy, hiring, and ops to turn momentum into a company.
-                            </p>
+                            <Motion.div
+                                className="w-full flex justify-end"
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ once: true, amount: 0.4 }}
+                                variants={fadeUp}
+                                custom={0.12}
+                            >
+                                <span className="shrink-0 whitespace-normal sm:whitespace-nowrap font-myfont font-bold text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[0.02em] text-indigo-600">
+                                    We are co-builders.
+                                </span>
+                            </Motion.div>
                         </div>
                     </div>
                 </div>
@@ -43,4 +121,4 @@ const Aboutsection = () => {
     )
 }
 
-export default Aboutsection;
+export default Aboutsection

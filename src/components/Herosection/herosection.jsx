@@ -26,7 +26,7 @@ const Herosection = () => {
                             Apply for funding
                         </button>
                         <button className="flex-1 rounded-xl border border-indigo-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
-                            brochure
+                            Brochure
                         </button>
                     </div>
                 </div>
