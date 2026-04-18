@@ -16,7 +16,7 @@ const Aboutsection = () => {
                 <div className="grid items-start gap-14 md:grid-cols-12">
                     <div className="md:col-span-7">
                         <Motion.h2
-                            className="font-myfont m-0 max-w-full text-[clamp(2.4rem,4.6vw,4.25rem)] font-bold leading-[0.95] tracking-[-0.02em] text-neutral-900 whitespace-nowrap"
+                            className="font-myfont Bold m-0 max-w-full text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[-0.02em] text-neutral-900 whitespace-nowrap"
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.7 }}
@@ -67,19 +67,19 @@ practical, results-driven approach.`}
                             custom={0.24}
                         >
                             <li className="flex items-center gap-3">
-                                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <svg className="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                 </svg>
                                 <span className="font-medium text-[16px] md:text-[18px]">Access to our partnering & design team</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <svg className="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                 </svg>
                                 <span className="font-medium text-[16px] md:text-[18px]">Deep expertise across industries</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <svg className="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                 </svg>
                                 <span className="font-medium text-[16px] md:text-[18px]">Close a Series A within 6 months</span>
@@ -109,7 +109,7 @@ practical, results-driven approach.`}
                                 variants={fadeUp}
                                 custom={0.12}
                             >
-                                <span className="shrink-0 whitespace-normal sm:whitespace-nowrap font-myfont font-bold text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[0.02em] text-indigo-600">
+                                <span className="shrink-0 whitespace-normal sm:whitespace-nowrap font-myfont bold text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[0.02em] text-violet-600">
                                     We are co-builders.
                                 </span>
                             </Motion.div>

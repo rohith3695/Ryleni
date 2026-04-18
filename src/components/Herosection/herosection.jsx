@@ -8,7 +8,7 @@ const Herosection = () => {
                         <span className="block text-[70px] font-myfont leading-[1]">
                             We Build, Fund & Scale
                         </span>
-                        <span className="text-indigo-600 block mt-1 font-myfont italic text-[50px] leading-[1]">
+                        <span className="text-violet-600 block mt-1 font-myfont italic text-[50px] leading-[1]">
                             Innovative Startups.
                         </span>
                     </h1>
@@ -19,13 +19,13 @@ const Herosection = () => {
                         capital, strategy, and operational excellence.
                     </p>
                     <div className="mx-auto flex w-full max-w-[650px] items-center gap-6">
-                        <button className="flex-1 rounded-xl border border-indigo-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
+                        <button className="flex-1 rounded-xl border bg-violet-600 text-white px-6 py-3 text-sm font-semibold text-neutral-900">
                             Explore services
                         </button>
-                        <button className="flex-1 rounded-xl border border-indigo-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
+                        <button className="flex-1 rounded-xl border border-violet-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
                             Apply for funding
                         </button>
-                        <button className="flex-1 rounded-xl border border-indigo-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
+                        <button className="flex-1 rounded-xl border border-violet-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
                             Brochure
                         </button>
                     </div>
