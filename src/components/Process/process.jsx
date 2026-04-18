@@ -40,7 +40,7 @@ const Process = () => (
                 THE PROCESS
             </div>
             <h2 className="mt-5 text-[clamp(2.1rem,4.2vw,3.75rem)] font-myfont leading-[1.05] tracking-[-0.02em] text-neutral-900">
-                A clear path from idea to scale.
+                A Clear path from <span className='font-instrument italic text-violet-600'>idea</span> to <span className='font-instrument italic text-violet-600'>scale</span>.
             </h2>
             <p className="mx-auto mt-5 max-w-3xl text-[20px] leading-relaxed text-neutral-700 md:text-[18px]">
                 Our streamlined process gets you from application to investment in weeks, not months.

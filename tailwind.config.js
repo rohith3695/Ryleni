@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        myfont: ['Season', 'serif'],
-        clashfont: ['Season', 'serif'],
+        myfont: ['Monument', 'sans-serif'],
+        clashfont: ['Monument', 'sans-serif'],
         instrument: ['Instrument', 'serif'],
-        season: ['Season', 'serif']
+        season: ['Monument', 'sans-serif']
       },
     },
   },

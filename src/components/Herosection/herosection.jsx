@@ -15,7 +15,7 @@ const Herosection = () => {
                             delay={200}
                             animateBy="words"
                             direction="top"
-                            className="text-violet-600 mt-1 font-myfont font-light italic text-[70px] leading-[1] justify-center"
+                            className="text-violet-600 mt-1 font-instrument italic text-[70px] leading-[1] justify-center"
                         />
                     </h1>
 

@@ -51,7 +51,7 @@ const Header = () => {
                 </nav>
 
                 <button
-                    className="whitespace-nowrap rounded-2xl bg-violet-600 px-[22px] py-[14px] text-[15px] font-semibold text-white shadow-[0_10px_18px_rgba(0,0,0,0.28)] max-[760px]:hidden"
+                    className="whitespace-nowrap rounded-2xl bg-violet-600 px-[22px] py-[14px] text-[15px] font-season text-white shadow-[0_10px_18px_rgba(0,0,0,0.28)] max-[760px]:hidden"
                     type="button"
                 >
                     Apply Now
