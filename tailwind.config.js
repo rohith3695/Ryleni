@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        myfont: ['Ranade', 'sans-serif'],
-        clashfont: ['Clash', 'sans-serif']
+        myfont: ['Season', 'serif'],
+        clashfont: ['Season', 'serif'],
+        instrument: ['Instrument', 'serif'],
+        season: ['Season', 'serif']
       },
     },
   },

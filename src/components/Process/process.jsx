@@ -28,7 +28,7 @@ const BOT_Y = 508  // line 3 — steps 3 & 4
 const CONT_H = 720  // container height in px
 
 const Process = () => (
-    <section className="py-20" style={{ overflow: 'clip' }}>
+    <section className="py-20 dot-grid" style={{ overflow: 'clip' }}>
         <motion.div
             className="font-myfont mx-auto max-w-5xl px-6 text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -42,7 +42,7 @@ const Process = () => (
             <h2 className="mt-5 text-[clamp(2.1rem,4.2vw,3.75rem)] font-myfont leading-[1.05] tracking-[-0.02em] text-neutral-900">
                 A clear path from idea to scale.
             </h2>
-            <p className="mx-auto mt-5 max-w-3xl text-[16px] leading-relaxed text-neutral-500 md:text-[18px]">
+            <p className="mx-auto mt-5 max-w-3xl text-[20px] leading-relaxed text-neutral-700 md:text-[18px]">
                 Our streamlined process gets you from application to investment in weeks, not months.
             </p>
         </motion.div>
@@ -114,8 +114,8 @@ const Process = () => (
                         <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-violet-600 text-white font-medium shadow-sm">
                             {step.number}
                         </div>
-                        <h3 className="font-semibold text-base">{step.title}</h3>
-                        <p className="text-sm text-gray-500 mt-2 leading-relaxed">{step.description}</p>
+                        <h3 className="text-base text-neutral-full font-semibold">{step.title}</h3>
+                        <p className="text-sm text-gray-500 mt-2 leading-relaxed text-neutral-700">{step.description}</p>
                     </motion.div>
                 ))}
             </div>
@@ -146,8 +146,8 @@ const Process = () => (
                         <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-violet-600 text-white font-medium shadow-sm">
                             {step.number}
                         </div>
-                        <h3 className="font-semibold text-base">{step.title}</h3>
-                        <p className="text-sm text-gray-500 mt-2 leading-relaxed">{step.description}</p>
+                        <h3 className="text-base font-semibold">{step.title}</h3>
+                        <p className="text-sm text-gray-500 mt-2 leading-relaxed text-neutral-700">{step.description}</p>
                     </motion.div>
                 ))}
             </div>

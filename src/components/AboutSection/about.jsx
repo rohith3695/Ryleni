@@ -11,7 +11,7 @@ const Aboutsection = () => {
     }
 
     return (
-        <section className="w-full border-t border-neutral-200 py-24">
+        <section className="w-full border-t border-neutral-200 py-24 dot-grid">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="grid items-start gap-14 md:grid-cols-12">
                     <div className="md:col-span-7">
@@ -27,7 +27,7 @@ const Aboutsection = () => {
                         </Motion.h2>
 
                         <Motion.p
-                            className="mt-10 max-w-[60ch] whitespace-pre-line text-[16px] leading-relaxed text-neutral-600 md:text-[18px]"
+                            className="mt-10 max-w-[60ch] whitespace-pre-line text-[16px] leading-relaxed text-neutral-800 md:text-[18px]"
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.6 }}

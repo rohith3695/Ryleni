@@ -1,3 +1,5 @@
+import BlurText from '../BlurText';
+
 const Herosection = () => {
 
     return (
@@ -5,15 +7,19 @@ const Herosection = () => {
             <div className="flex flex-col items-center text-center">
                 <div className="flex flex-col gap-10">
                     <h1 className="text-center">
-                        <span className="block text-[70px] font-myfont leading-[1]">
+                        <span className="block text-[70px] font-season leading-[1]">
                             We Build, Fund & Scale
                         </span>
-                        <span className="text-violet-600 block mt-1 font-myfont italic text-[50px] leading-[1]">
-                            Innovative Startups.
-                        </span>
+                        <BlurText
+                            text="Innovative Startups."
+                            delay={200}
+                            animateBy="words"
+                            direction="top"
+                            className="text-violet-600 mt-1 font-myfont font-light italic text-[70px] leading-[1] justify-center"
+                        />
                     </h1>
 
-                    <p className="font-myfont text-[19px] leading-[1.6] text-neutral-400 max-w-[650px] mx-auto">
+                    <p className="text-[19px] leading-[1.6] text-neutral-700 max-w-[650px] mx-auto">
                         Our venture studio partners with founders to transform <br />
                         breakthrough ideas into scalable companies through <br />
                         capital, strategy, and operational excellence.

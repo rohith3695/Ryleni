@@ -3,6 +3,7 @@ import Aboutsection from "./components/AboutSection/about"
 import Header from "./components/Header/header"
 import Herosection from "./components/Herosection/herosection"
 import Process from "./components/Process/process"
+import Team from "./components/Team/team"
 import "./index.css"
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Header></Header>
         <Herosection></Herosection>
         <Aboutsection></Aboutsection>
+        <Team></Team>
         <Process></Process>
 
       </div>
