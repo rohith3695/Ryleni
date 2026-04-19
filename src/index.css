@@ -89,3 +89,20 @@ button {
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.18) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+.footer-wrapper {
+  position: sticky;
+  bottom: 0;
+  z-index: 0;
+}
+
+.last-page-section {
+  position: relative;
+  z-index: 10;
+  background: #ffffff;
+}
+
+/* Ensure SmoothScroll or main container doesn't clip the sticky footer */
+.smooth-content {
+  overflow: visible !important;
+}

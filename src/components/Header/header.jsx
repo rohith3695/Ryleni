@@ -15,7 +15,7 @@ const Header = () => {
                 </a>
 
                 <nav
-                    className="flex flex-1 items-center justify-center gap-11 max-[760px]:hidden text-[16px]"
+                    className="flex flex-1 items-center justify-end pr-5 gap-5 max-[760px]:hidden text-[16px]"
                     aria-label="Primary"
                 >
                     <a
