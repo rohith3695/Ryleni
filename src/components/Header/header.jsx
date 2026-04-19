@@ -1,4 +1,6 @@
 
+import PillButton from '../Pillbutton';
+
 const Header = () => {
     return (
         <header className="w-full px-[18px] py-6 font-season">
@@ -50,12 +52,9 @@ const Header = () => {
                     </a>
                 </nav>
 
-                <button
-                    className="whitespace-nowrap rounded-2xl bg-violet-600 px-[22px] py-[14px] text-[15px] font-season text-white shadow-[0_10px_18px_rgba(0,0,0,0.28)] max-[760px]:hidden"
-                    type="button"
-                >
-                    Apply Now
-                </button>
+                <div className="max-[760px]:hidden shrink-0">
+                    <PillButton label="Apply Now" href="#" isSmall={true} variantColor="#7c3aed" />
+                </div>
 
                 <button
                     className="ml-auto hidden h-[42px] w-[42px] items-center justify-center rounded-[14px] border border-neutral-200 bg-white max-[760px]:inline-flex"

@@ -1,7 +1,7 @@
 import BlurText from '../BlurText';
+import PillButton from '../Pillbutton';
 
 const Herosection = () => {
-
     return (
         <section className="w-full mt-8 py-12 min-h-[calc(100svh-140px)]">
             <div className="flex flex-col items-center text-center">
@@ -24,16 +24,11 @@ const Herosection = () => {
                         breakthrough ideas into scalable companies through <br />
                         capital, strategy, and operational excellence.
                     </p>
-                    <div className="mx-auto flex w-full max-w-[650px] items-center gap-6">
-                        <button className="flex-1 rounded-xl border bg-violet-600 text-white px-6 py-3 text-sm font-semibold text-neutral-900">
-                            Explore services
-                        </button>
-                        <button className="flex-1 rounded-xl border border-violet-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
-                            Apply for funding
-                        </button>
-                        <button className="flex-1 rounded-xl border border-violet-600 bg-white px-6 py-3 text-sm font-semibold text-neutral-900">
-                            Brochure
-                        </button>
+
+                    <div className="mx-auto flex items-center justify-center gap-4 flex-wrap">
+                        <PillButton label="Explore services" href="#" />
+                        <PillButton label="Apply for funding" href="#" />
+                        <PillButton label="Brochure" href="#" />
                     </div>
                 </div>
             </div>
