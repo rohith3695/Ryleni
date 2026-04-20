@@ -10,14 +10,13 @@ const images = [
     { image: '/team/image copy 2.png' }
 ]
 
-
 const Card = ({ image }) => {
     return (
-        <div className="w-[400px] h-[540px] shrink-0 rounded-xl overflow-hidden">
+        <div className="w-[280px] md:w-[400px] h-[380px] md:h-[540px] shrink-0 rounded-xl overflow-hidden">
             <img
                 src={image}
                 alt="team"
-                className="w-full h-full object-cover "
+                className="w-full h-full object-cover"
             />
         </div>
     )
@@ -36,7 +35,7 @@ const Marquee = ({ children }) => {
                 }}
             >
                 {children}
-                {children} {/* duplicate for loop */}
+                {children}
             </motion.div>
         </div>
     )
@@ -45,9 +44,9 @@ const Marquee = ({ children }) => {
 const Team = () => {
     return (
         <section className="py-20 dot-grid">
-            <div className="flex flex-col items-center text-center gap-14">
-                <h2 className="text-[clamp(2.4rem,4.6vw,4.5rem)] leading-none flex items-center justify-center gap-[0.3em] font-season">
-                    <span>The Minds behind</span>
+            <div className="flex flex-col items-center text-center gap-8 md:gap-14">
+                <h2 className="text-[clamp(2.2rem,4.6vw,4.5rem)] leading-[1.1] flex flex-col md:flex-row items-center justify-center md:gap-[0.3em] font-season px-4">
+                    <span className="whitespace-normal">The Minds behind</span>
                     <BlurText
                         text="Ryleni."
                         delay={150}

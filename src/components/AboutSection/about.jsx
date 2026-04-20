@@ -16,7 +16,7 @@ const Aboutsection = () => {
                 <div className="grid items-start gap-14 md:grid-cols-12">
                     <div className="md:col-span-7">
                         <Motion.h2
-                            className="font-myfont Bold m-0 max-w-full text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[-0.02em] text-neutral-900 whitespace-nowrap"
+                            className="font-myfont Bold m-0 max-w-full text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[-0.02em] text-neutral-900"
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.7 }}
@@ -109,7 +109,7 @@ practical, results-driven approach.`}
                                 variants={fadeUp}
                                 custom={0.12}
                             >
-                                <span className="shrink-0 whitespace-normal sm:whitespace-nowrap font-myfont bold text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[0.02em] text-violet-600">
+                                <span className="font-myfont bold text-[clamp(2rem,4.6vw,4.25rem)] leading-[0.95] tracking-[0.02em] text-violet-600">
                                     We are co-builders.
                                 </span>
                             </Motion.div>

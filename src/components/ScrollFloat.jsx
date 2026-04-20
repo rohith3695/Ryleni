@@ -31,7 +31,6 @@ const ScrollFloat = ({
         if (!el) return;
 
         const scroller = scrollContainerRef && scrollContainerRef.current ? scrollContainerRef.current : window;
-
         const charElements = el.querySelectorAll('.inline-block');
 
         gsap.fromTo(

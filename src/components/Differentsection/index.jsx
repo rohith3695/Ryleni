@@ -33,6 +33,7 @@ const services = [
 ];
 
 const STICKY_TOP = 120;
+const CARD_STEP = 460;
 
 function MediaBlock({ number, imageY }) {
     return (
@@ -92,7 +93,7 @@ function ContentBlock({ service }) {
             <h3
                 className="font-myfont"
                 style={{
-                    fontSize: 32,
+                    fontSize: "clamp(1.3rem, 4vw, 2rem)",
                     fontWeight: 500,
                     marginTop: 12,
                     marginBottom: 0,
@@ -120,15 +121,10 @@ function ContentBlock({ service }) {
     );
 }
 
-// Each card takes ~460px of scroll to fully stack (340 minHeight + 48*2 padding + 24 margin)
-const CARD_STEP = 460;
-
 function ServiceCard({ service, index, total, scrolledPx }) {
     const isEven = index % 2 === 0;
     const isLast = index === total - 1;
 
-    // Blur starts when the NEXT card has reached the HALFWAY point of this card.
-    // Blur completes when the next card has fully covered this card.
     const blurStart = index * CARD_STEP + CARD_STEP * 0.5;
     const blurEnd = (index + 1) * CARD_STEP;
 
@@ -148,7 +144,6 @@ function ServiceCard({ service, index, total, scrolledPx }) {
         isLast ? [1, 1] : [1, 0.75]
     );
 
-    // Parallax on the placeholder number
     const imageY = useTransform(scrolledPx, [0, total * CARD_STEP], [0, -24]);
 
     return (
@@ -169,28 +164,20 @@ function ServiceCard({ service, index, total, scrolledPx }) {
                 style={{
                     background: "#7c3aed",
                     borderRadius: 24,
-                    padding: 48,
                     overflow: "hidden",
                 }}
+                className="p-5 md:p-[48px]"
             >
-                <div
-                    style={{
-                        display: "grid",
-                        gridTemplateColumns: "1fr 1fr",
-                        gap: 48,
-                        alignItems: "center",
-                        minHeight: 340,
-                    }}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[48px] items-center min-h-0 md:min-h-[340px]">
                     {isEven ? (
                         <>
-                            <MediaBlock number={service.number} imageY={imageY} />
+                            <div className="hidden md:block"><MediaBlock number={service.number} imageY={imageY} /></div>
                             <ContentBlock service={service} />
                         </>
                     ) : (
                         <>
                             <ContentBlock service={service} />
-                            <MediaBlock number={service.number} imageY={imageY} />
+                            <div className="hidden md:block"><MediaBlock number={service.number} imageY={imageY} /></div>
                         </>
                     )}
                 </div>
@@ -201,7 +188,7 @@ function ServiceCard({ service, index, total, scrolledPx }) {
 
 export default function Services() {
     const containerRef = useRef(null);
-    const scrolledPx = useMotionValue(0); // raw pixels scrolled into the container
+    const scrolledPx = useMotionValue(0);
 
     useEffect(() => {
         let rafId;
@@ -209,7 +196,6 @@ export default function Services() {
         const update = () => {
             if (containerRef.current) {
                 const rect = containerRef.current.getBoundingClientRect();
-                // Raw pixels the container top has scrolled above the viewport
                 const scrolled = Math.max(0, -rect.top);
                 scrolledPx.set(scrolled);
             }
@@ -226,8 +212,6 @@ export default function Services() {
             style={{ paddingTop: 40, paddingBottom: 100 }}
         >
             <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
-
-                {/* ── Section label + heading — matches Process/About pattern ── */}
                 <div style={{ marginBottom: 56, textAlign: "center" }}>
                     <div
                         className="font-myfont"
@@ -286,7 +270,6 @@ export default function Services() {
                     </div>
                 </div>
 
-                {/* Sticky stack container */}
                 <div
                     ref={containerRef}
                     style={{

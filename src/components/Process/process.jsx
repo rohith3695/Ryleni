@@ -22,10 +22,11 @@ const steps = [
         description: 'Raise follow-on capital, unlock our corporate network, and scale into new markets.'
     }
 ]
-const TOP_Y = 32   // line 1 — steps 1 & 2
-const MID_Y = 270  // line 2 — empty  │ gap = 238px each
-const BOT_Y = 508  // line 3 — steps 3 & 4
-const CONT_H = 720  // container height in px
+
+const TOP_Y = 32;
+const MID_Y = 270;
+const BOT_Y = 508;
+const CONT_H = 720;
 
 const Process = () => (
     <section className="py-20 dot-grid" style={{ overflow: 'clip' }}>
@@ -42,15 +43,38 @@ const Process = () => (
             <h2 className="mt-5 text-[clamp(2.1rem,4.2vw,3.75rem)] font-myfont leading-[1.05] tracking-[-0.02em] text-neutral-900">
                 A Clear path from <span className='font-instrument italic text-violet-600'>idea</span> to <span className='font-instrument italic text-violet-600'>scale</span>.
             </h2>
-            <p className="mx-auto mt-5 max-w-3xl text-[20px] leading-relaxed text-neutral-700 md:text-[18px]">
+            <p className="mx-auto mt-5 max-w-3xl text-[16px] leading-relaxed text-neutral-700 md:text-[18px]">
                 Our streamlined process gets you from application to investment in weeks, not months.
             </p>
         </motion.div>
+
+        {/* Mobile: vertical list */}
+        <div className="md:hidden max-w-sm mx-auto px-6 mt-12 flex flex-col gap-8">
+            {steps.map((step) => (
+                <motion.div
+                    key={step.number}
+                    className="flex gap-5 items-start"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: Number(step.number) * 0.15 }}
+                    viewport={{ once: true, margin: "-30px" }}
+                >
+                    <div className="w-12 h-12 rounded-full shrink-0 flex items-center justify-center bg-violet-600 text-white font-medium shadow-sm">
+                        {step.number}
+                    </div>
+                    <div className="text-left">
+                        <h3 className="text-base font-semibold text-neutral-900">{step.title}</h3>
+                        <p className="text-sm text-neutral-500 mt-1 leading-relaxed">{step.description}</p>
+                    </div>
+                </motion.div>
+            ))}
+        </div>
+
+        {/* Desktop: SVG snake */}
         <div
-            className="max-w-5xl mx-auto"
+            className="hidden md:block max-w-5xl mx-auto"
             style={{ position: 'relative', height: `${CONT_H}px` }}
         >
-            {/* ── SVG 3-LINE SNAKE ───────────────────────────────── */}
             <svg
                 style={{
                     position: 'absolute',
@@ -65,11 +89,6 @@ const Process = () => (
                 preserveAspectRatio="none"
                 fill="none"
             >
-                {/*
-                  Radius right-cap = (MID_Y - TOP_Y) / 2 = 84
-                  Radius left-cap  = (BOT_Y - MID_Y) / 2 = 84
-                  Perfect symmetric S!
-                */}
                 <motion.path
                     initial={{ pathLength: 0, opacity: 0 }}
                     whileInView={{ pathLength: 1, opacity: 1 }}
@@ -90,7 +109,6 @@ const Process = () => (
                 />
             </svg>
 
-            {/* ── LINE 1: Steps 1 & 2 ────────────────────────────── */}
             <div
                 style={{
                     position: 'absolute',
@@ -120,9 +138,6 @@ const Process = () => (
                 ))}
             </div>
 
-            {/* ── LINE 2: EMPTY — snake only, no icons ───────────── */}
-
-            {/* ── LINE 3: Steps 4 (left) & 3 (right) ────────────── */}
             <div
                 style={{
                     position: 'absolute',

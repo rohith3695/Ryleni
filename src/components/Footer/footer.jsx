@@ -35,13 +35,8 @@ const Footer = () => {
 
     return (
         <div className="footer-wrapper">
-            {/* Zone: Dark Footer (Perfected Reveal) */}
-            <section className="bg-violet-600 h-screen flex flex-col px-10 md:px-24 pt-24 pb-12 relative overflow-hidden">
-
-                {/* Main Content Grid: Top Aligned & Clustered */}
+            <section className="bg-violet-600 min-h-screen flex flex-col px-6 md:px-24 pt-16 md:pt-24 pb-12 relative overflow-hidden">
                 <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 md:grid-cols-[0.8fr_0.8fr_2fr] gap-x-12 gap-y-12 relative z-10 items-start">
-
-                    {/* Column 1: Sitemap */}
                     <FadeUp delay={0}>
                         <div className="flex flex-col gap-8">
                             <h3 className="text-[#f1f0ee] text-3xl font-myfont tracking-tight">Sitemap</h3>
@@ -60,7 +55,6 @@ const Footer = () => {
                         </div>
                     </FadeUp>
 
-                    {/* Column 2: Follow me */}
                     <FadeUp delay={0.1}>
                         <div className="flex flex-col gap-8">
                             <h3 className="text-[#f1f0ee] text-3xl font-myfont tracking-tight">Follow us</h3>
@@ -79,7 +73,6 @@ const Footer = () => {
                         </div>
                     </FadeUp>
 
-                    {/* Column 3: Contact Section */}
                     <FadeUp delay={0.2}>
                         <div className="flex flex-col gap-1 md:pl-20">
                             <h2 className="text-[#f1f0ee] text-3xl md:text-5xl font-myfont tracking-tight">Contact us:</h2>
@@ -91,7 +84,6 @@ const Footer = () => {
                                 hello@ryleni.com
                             </motion.a>
 
-                            {/* Legal block — sits naturally in the gap between email and RYLENI top */}
                             <div className="mt-16 flex items-center gap-6 font-myfont tracking-tight flex-wrap">
                                 <p className="text-[#f1f0ee] text-[14px] opacity-100">© 2026 Ventures Studio. All rights reserved.</p>
                                 <span className="text-[#f1f0ee] opacity-30 text-[12px]">|</span>
@@ -103,7 +95,6 @@ const Footer = () => {
                     </FadeUp>
                 </div>
 
-                {/* Bottom Watermark: Huge & Boldly Styled at the very bottom */}
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-start pointer-events-none select-none overflow-hidden z-0">
                     <motion.div
                         ref={watermarkRef}
@@ -117,13 +108,11 @@ const Footer = () => {
                     </motion.div>
                 </div>
 
-
-                {/* Floating Scroll Top Button */}
                 <motion.button
                     onClick={scrollToTop}
                     whileHover={{ scale: 1.15, rotate: 5 }}
                     whileTap={{ scale: 0.9 }}
-                    className="absolute right-12 top-12 w-20 h-20 bg-[#edece9] rounded-full flex items-center justify-center pointer-events-auto transition-transform z-20 shadow-xl"
+                    className="absolute right-6 bottom-6 md:right-12 md:top-12 md:bottom-auto w-14 h-14 md:w-20 md:h-20 bg-[#edece9] rounded-full flex items-center justify-center pointer-events-auto transition-transform z-20 shadow-xl"
                 >
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <line x1="12" y1="19" x2="12" y2="5"></line>
@@ -134,12 +123,5 @@ const Footer = () => {
         </div>
     );
 };
-
-
-
-
-
-
-;
 
 export default Footer;

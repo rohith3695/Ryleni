@@ -51,8 +51,6 @@
   font-style: italic;
 }
 
-
-
 * {
   box-sizing: border-box;
 }
@@ -102,7 +100,6 @@ button {
   background: #ffffff;
 }
 
-/* Ensure SmoothScroll or main container doesn't clip the sticky footer */
 .smooth-content {
   overflow: visible !important;
 }

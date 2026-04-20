@@ -19,7 +19,6 @@ function App() {
           <Team />
           <Services></Services>
           <Process />
-          {/* Spacer to allow full sticky reveal of the full-screen footer */}
           <div className="h-48 pointer-events-none" />
         </div>
         <Footer />

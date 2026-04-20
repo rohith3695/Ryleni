@@ -3,7 +3,6 @@ import { useEffect, useRef, useState, useMemo } from 'react';
 
 const buildKeyframes = (from, steps) => {
     const keys = new Set([...Object.keys(from), ...steps.flatMap(s => Object.keys(s))]);
-
     const keyframes = {};
     keys.forEach(k => {
         keyframes[k] = [from[k], ...steps.map(s => s[k])];
@@ -70,24 +69,22 @@ const BlurText = ({
     const times = Array.from({ length: stepCount }, (_, i) => (stepCount === 1 ? 0 : i / (stepCount - 1)));
 
     return (
-        <p ref={ref} className={`blur-text ${className} flex flex-wrap`}>
+        <p ref={ref} className={`${className} flex flex-wrap`}>
             {elements.map((segment, index) => {
                 const animateKeyframes = buildKeyframes(fromSnapshot, toSnapshots);
 
-                const spanTransition = {
-                    duration: totalDuration,
-                    times,
-                    delay: (index * delay) / 1000
-                };
-                spanTransition.ease = easing;
-
                 return (
                     <motion.span
-                        className="inline-block will-change-[transform,filter,opacity]"
+                        className="inline-block"
                         key={index}
                         initial={fromSnapshot}
                         animate={inView ? animateKeyframes : fromSnapshot}
-                        transition={spanTransition}
+                        transition={{
+                            duration: totalDuration,
+                            times,
+                            delay: (index * delay) / 1000,
+                            ease: easing
+                        }}
                         onAnimationComplete={index === elements.length - 1 ? onAnimationComplete : undefined}
                     >
                         {segment === ' ' ? '\u00A0' : segment}

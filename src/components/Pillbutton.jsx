@@ -25,7 +25,6 @@ const PillButton = ({ label, href = "#", isSmall = false, variantColor = "#0e0e0
                 textDecoration: "none",
             }}
         >
-            {/* Violet fill that sweeps up from bottom on hover */}
             <motion.div
                 variants={{ hover: { y: "0%" } }}
                 initial={{ y: "102%" }}
@@ -39,7 +38,6 @@ const PillButton = ({ label, href = "#", isSmall = false, variantColor = "#0e0e0
                 }}
             />
 
-            {/* Label */}
             <motion.span
                 variants={{ hover: { color: "#ffffff" } }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
@@ -48,7 +46,6 @@ const PillButton = ({ label, href = "#", isSmall = false, variantColor = "#0e0e0
                 {label}
             </motion.span>
 
-            {/* Arrow SVG — variantColor by default, white on hover */}
             <motion.svg
                 variants={{ hover: { x: 4, y: -4 } }}
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
