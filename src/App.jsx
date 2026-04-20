@@ -6,6 +6,7 @@ import Process from "./components/Process/process"
 import Team from "./components/Team/team"
 import Footer from "./components/Footer/footer"
 import "./index.css"
+import Services from "./components/Differentsection"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Herosection />
           <Aboutsection />
           <Team />
+          <Services></Services>
           <Process />
           {/* Spacer to allow full sticky reveal of the full-screen footer */}
           <div className="h-48 pointer-events-none" />

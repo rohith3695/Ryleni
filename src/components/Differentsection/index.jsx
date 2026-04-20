@@ -1,0 +1,310 @@
+import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
+import BlurText from "../BlurText";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
+const services = [
+    {
+        number: "01",
+        title: "Tailored Approach",
+        description: "Every startup is unique. We design our engagement to match your specific goals, challenges, and market context.",
+    },
+    {
+        number: "02",
+        title: "Comprehensive Solutions",
+        description: "We empower businesses to enhance operational efficiency, modernize their technology, and implement intelligent solutions that drive long-term performance.",
+    },
+    {
+        number: "03",
+        title: "Accessible for Startups",
+        description: "Avoid steep upfront costs. Our flexible entry fees with subscription based model make professional support achievable for early-stage ventures.",
+    },
+    {
+        number: "04",
+        title: "Hands-On Execution",
+        description: "We embed ourselves in your vision, translating ideas into tangible products and processes alongside your team, ensuring every step drives real impact.",
+    },
+    {
+        number: "05",
+        title: "Proven Founders",
+        description: "Our team has built and scaled businesses themselves, bringing real world insights to help you succeed faster.",
+    },
+];
+
+const STICKY_TOP = 120;
+
+function MediaBlock({ number, imageY }) {
+    return (
+        <div
+            style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                borderRadius: 20,
+                padding: 48,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: 280,
+                overflow: "hidden",
+                position: "relative",
+            }}
+        >
+            <motion.div
+                style={{
+                    fontSize: "12rem",
+                    fontWeight: 900,
+                    color: "rgba(255, 255, 255, 0.05)",
+                    letterSpacing: "-0.05em",
+                    y: imageY,
+                    userSelect: "none",
+                }}
+            >
+                <FontAwesomeIcon icon={fas[`fa${parseInt(number)}`]} />
+            </motion.div>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-32 h-32 rounded-full border border-white/10 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-white/5" />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function ContentBlock({ service }) {
+    return (
+        <div className="font-myfont">
+            <span
+                style={{
+                    display: "inline-block",
+                    background: "rgba(255, 255, 255, 0.15)",
+                    fontSize: 14,
+                    padding: "6px 12px",
+                    borderRadius: 999,
+                    color: "#fff",
+                }}
+            >
+                <FontAwesomeIcon 
+                    icon={fas[`fa${parseInt(service.number)}`]} 
+                    style={{ color: "rgb(255, 255, 255)" }} 
+                />
+            </span>
+
+            <h3
+                className="font-myfont"
+                style={{
+                    fontSize: 32,
+                    fontWeight: 500,
+                    marginTop: 12,
+                    marginBottom: 0,
+                    color: "#fff",
+                    letterSpacing: "-0.01em",
+                    lineHeight: 1.2,
+                }}
+            >
+                {service.title}
+            </h3>
+
+            <p
+                className="font-myfont"
+                style={{
+                    fontSize: 15,
+                    color: "rgba(255, 255, 255, 0.8)",
+                    marginTop: 12,
+                    maxWidth: 420,
+                    lineHeight: 1.65,
+                }}
+            >
+                {service.description}
+            </p>
+        </div>
+    );
+}
+
+// Each card takes ~460px of scroll to fully stack (340 minHeight + 48*2 padding + 24 margin)
+const CARD_STEP = 460;
+
+function ServiceCard({ service, index, total, scrolledPx }) {
+    const isEven = index % 2 === 0;
+    const isLast = index === total - 1;
+
+    // Blur starts when the NEXT card has reached the HALFWAY point of this card.
+    // Blur completes when the next card has fully covered this card.
+    const blurStart = index * CARD_STEP + CARD_STEP * 0.5;
+    const blurEnd = (index + 1) * CARD_STEP;
+
+    const scale = useTransform(
+        scrolledPx,
+        isLast ? [0, 1] : [blurStart, blurEnd],
+        isLast ? [1, 1] : [1, 0.93]
+    );
+    const blur = useTransform(
+        scrolledPx,
+        isLast ? [0, 1] : [blurStart, blurEnd],
+        isLast ? ["blur(0px)", "blur(0px)"] : ["blur(0px)", "blur(6px)"]
+    );
+    const opacity = useTransform(
+        scrolledPx,
+        isLast ? [0, 1] : [blurStart, blurEnd],
+        isLast ? [1, 1] : [1, 0.75]
+    );
+
+    // Parallax on the placeholder number
+    const imageY = useTransform(scrolledPx, [0, total * CARD_STEP], [0, -24]);
+
+    return (
+        <motion.div
+            style={{
+                position: "sticky",
+                top: STICKY_TOP,
+                zIndex: 10 + index,
+                scale,
+                filter: blur,
+                opacity,
+                transformOrigin: "top center",
+                marginBottom: 24,
+            }}
+            whileHover={{ y: -2, transition: { duration: 0.3, ease: "easeOut" } }}
+        >
+            <div
+                style={{
+                    background: "#7c3aed",
+                    borderRadius: 24,
+                    padding: 48,
+                    overflow: "hidden",
+                }}
+            >
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr",
+                        gap: 48,
+                        alignItems: "center",
+                        minHeight: 340,
+                    }}
+                >
+                    {isEven ? (
+                        <>
+                            <MediaBlock number={service.number} imageY={imageY} />
+                            <ContentBlock service={service} />
+                        </>
+                    ) : (
+                        <>
+                            <ContentBlock service={service} />
+                            <MediaBlock number={service.number} imageY={imageY} />
+                        </>
+                    )}
+                </div>
+            </div>
+        </motion.div>
+    );
+}
+
+export default function Services() {
+    const containerRef = useRef(null);
+    const scrolledPx = useMotionValue(0); // raw pixels scrolled into the container
+
+    useEffect(() => {
+        let rafId;
+
+        const update = () => {
+            if (containerRef.current) {
+                const rect = containerRef.current.getBoundingClientRect();
+                // Raw pixels the container top has scrolled above the viewport
+                const scrolled = Math.max(0, -rect.top);
+                scrolledPx.set(scrolled);
+            }
+            rafId = requestAnimationFrame(update);
+        };
+
+        rafId = requestAnimationFrame(update);
+        return () => cancelAnimationFrame(rafId);
+    }, [scrolledPx]);
+
+    return (
+        <section
+            className="border-t border-neutral-200 dot-grid"
+            style={{ paddingTop: 40, paddingBottom: 100 }}
+        >
+            <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
+
+                {/* ── Section label + heading — matches Process/About pattern ── */}
+                <div style={{ marginBottom: 56, textAlign: "center" }}>
+                    <div
+                        className="font-myfont"
+                        style={{
+                            fontSize: 12,
+                            fontWeight: 700,
+                            letterSpacing: "0.22em",
+                            color: "#7c3aed",
+                            textTransform: "uppercase",
+                            marginBottom: 20,
+                        }}
+                    >
+                        What Makes Us Different
+                    </div>
+
+                    <div className="flex flex-col items-center gap-8">
+                        <h2
+                            className="font-myfont"
+                            style={{
+                                fontSize: "clamp(2.4rem, 4.6vw, 4.5rem)",
+                                fontWeight: 500,
+                                lineHeight: 1.05,
+                                letterSpacing: "-0.02em",
+                                color: "#111",
+                                margin: 0,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: "0.3em",
+                                flexWrap: "wrap"
+                            }}
+                        >
+                            <span>What Makes Ryleni</span>
+                            <BlurText
+                                text="Different"
+                                delay={150}
+                                animateBy="words"
+                                direction="top"
+                                className="font-instrument italic text-violet-600 mt-0"
+                            />
+                        </h2>
+
+                        <p
+                            className="font-myfont mx-auto"
+                            style={{
+                                fontSize: 17,
+                                color: "#737373",
+                                maxWidth: 600,
+                                lineHeight: 1.6,
+                                margin: 0,
+                                textAlign: "center",
+                            }}
+                        >
+                            Five principles that define how we partner, build, and grow with every founder.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Sticky stack container */}
+                <div
+                    ref={containerRef}
+                    style={{
+                        position: "relative",
+                        paddingBottom: 0,
+                    }}
+                >
+                    {services.map((service, index) => (
+                        <ServiceCard
+                            key={service.number}
+                            service={service}
+                            index={index}
+                            total={services.length}
+                            scrolledPx={scrolledPx}
+                        />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
