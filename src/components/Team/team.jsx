@@ -23,19 +23,25 @@ const Card = ({ image }) => {
 }
 
 const Marquee = ({ children }) => {
+    const duration = typeof window !== 'undefined' && window.innerWidth < 768 ? 18 : 30;
+
     return (
-        <div className="overflow-hidden mt-10">
+        <div className="overflow-hidden mt-10 w-full">
             <motion.div
-                className="flex gap-6"
+                className="flex w-fit"
                 animate={{ x: ["0%", "-50%"] }}
                 transition={{
-                    duration: 20,
+                    duration: duration,
                     ease: "linear",
                     repeat: Infinity
                 }}
             >
-                {children}
-                {children}
+                <div className="flex gap-6 pr-6 shrink-0">
+                    {children}
+                </div>
+                <div className="flex gap-6 pr-6 shrink-0">
+                    {children}
+                </div>
             </motion.div>
         </div>
     )
@@ -45,7 +51,7 @@ const Team = () => {
     return (
         <section className="py-20 dot-grid">
             <div className="flex flex-col items-center text-center gap-8 md:gap-14">
-                <h2 className="text-[clamp(2.2rem,4.6vw,4.5rem)] leading-[1.1] flex flex-col md:flex-row items-center justify-center md:gap-[0.3em] font-season px-4">
+                <h2 className="text-[clamp(32px,4.6vw,4.5rem)] leading-[1.1] flex flex-col md:flex-row items-center justify-center md:gap-[0.3em] font-season px-4">
                     <span className="whitespace-normal">The Minds behind</span>
                     <BlurText
                         text="Ryleni."
@@ -55,7 +61,7 @@ const Team = () => {
                         className="font-instrument italic text-violet-600 italic mt-0"
                     />
                 </h2>
-                <p className="text-gray-500 max-w-[600px]">
+                <p className="mt-6 font-myfont text-[16px] md:text-[18px] max-w-[600px] mx-auto leading-relaxed text-gray-500">
                     Our team of experienced operators, engineers, and strategists are dedicated to building the future.
                 </p>
             </div>

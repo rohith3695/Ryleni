@@ -35,7 +35,7 @@ const Footer = () => {
 
     return (
         <div className="footer-wrapper">
-            <section className="bg-violet-600 min-h-screen flex flex-col px-6 md:px-24 pt-16 md:pt-24 pb-12 relative overflow-hidden">
+            <section className="bg-violet-600 min-h-screen flex flex-col px-6 md:px-24 pt-12 md:pt-16 pb-12 relative overflow-hidden">
                 <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 md:grid-cols-[0.8fr_0.8fr_2fr] gap-x-12 gap-y-12 relative z-10 items-start">
                     <FadeUp delay={0}>
                         <div className="flex flex-col gap-8">
@@ -84,18 +84,20 @@ const Footer = () => {
                                 hello@ryleni.com
                             </motion.a>
 
-                            <div className="mt-16 flex items-center gap-6 font-myfont tracking-tight flex-wrap">
+                            <div className="mt-16 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 font-myfont tracking-tight">
                                 <p className="text-[#f1f0ee] text-[14px] opacity-100">© 2026 Ventures Studio. All rights reserved.</p>
-                                <span className="text-[#f1f0ee] opacity-30 text-[12px]">|</span>
-                                <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Privacy Policy</a>
-                                <span className="text-[#f1f0ee] opacity-30 text-[12px]">|</span>
-                                <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Terms of Service</a>
+                                <span className="hidden md:inline text-[#f1f0ee] opacity-30 text-[12px]">|</span>
+                                <div className="flex items-center gap-4 md:gap-6 flex-wrap">
+                                    <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Privacy Policy</a>
+                                    <span className="text-[#f1f0ee] opacity-30 text-[12px]">|</span>
+                                    <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Terms of Service</a>
+                                </div>
                             </div>
                         </div>
                     </FadeUp>
                 </div>
 
-                <div className="absolute inset-x-0 bottom-0 flex items-end justify-start pointer-events-none select-none overflow-hidden z-0">
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-start pointer-events-none select-none overflow-hidden z-0 opacity-[0.04] md:opacity-100">
                     <motion.div
                         ref={watermarkRef}
                         initial={{ opacity: 0, y: 150 }}

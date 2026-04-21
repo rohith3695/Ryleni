@@ -7,6 +7,8 @@ import Team from "./components/Team/team"
 import Footer from "./components/Footer/footer"
 import "./index.css"
 import Services from "./components/Differentsection"
+import Challenges from "./components/Challenges"
+import Portfolio from "./components/Portfolio/portfolio"
 
 function App() {
   return (
@@ -17,17 +19,15 @@ function App() {
           <Herosection />
           <Aboutsection />
           <Team />
-          <Services></Services>
+          <Services />
+          <Challenges />
           <Process />
-          <div className="h-48 pointer-events-none" />
+          <Portfolio />
         </div>
         <Footer />
       </div>
     </SmoothScroll>
-
-  )
+  );
 }
 
-
-
-export default App
+export default App;

@@ -26,16 +26,13 @@ const Header = () => {
 
     return (
         <header className="relative w-full px-[18px] py-6 font-season z-[100]">
-            <div className="mx-auto flex max-w-[1240px] items-center gap-[18px] rounded-[28px] border border-neutral-200 bg-white px-[22px] py-[18px] shadow-[0_10px_24px_rgba(0,0,0,0.10)] max-[760px]:rounded-[22px] max-[760px]:px-[14px] max-[760px]:py-[14px]">
+            <div className="mx-auto flex max-w-[1240px] items-center gap-[18px] rounded-full border border-neutral-200 bg-white px-[22px] py-[18px] shadow-[0_10px_24px_rgba(0,0,0,0.10)] max-[760px]:px-[14px] max-[760px]:py-[14px]">
                 <a className="flex items-center gap-[12px] whitespace-nowrap text-neutral-950 no-underline" href="/">
                     <img
-                        src="/favicon.svg"
+                        src="/Logo.png"
                         alt="Ryleni Logo"
-                        className="block h-[32px] w-auto shrink-0 object-contain"
+                        className="block h-[35px] md:h-[46px] w-auto shrink-0 object-contain"
                     />
-                    <span className="text-[26px] font-bold lowercase tracking-[-0.03em] text-violet-600 not-italic font-myfont">
-                        ryleni
-                    </span>
                 </a>
 
                 <nav
@@ -88,7 +85,11 @@ const Header = () => {
                         >
                             <div className="flex flex-col h-full">
                                 <div className="flex items-center justify-between mb-12">
-                                    <span className="font-myfont text-2xl font-bold text-violet-600">ryleni</span>
+                                    <img
+                                        src="/Logo.svg"
+                                        alt="Ryleni Logo"
+                                        className="block h-[40px] w-auto shrink-0 object-contain"
+                                    />
                                     <button
                                         onClick={() => setIsOpen(false)}
                                         className="flex h-10 w-10 items-center justify-center rounded-full border border-neutral-100 bg-neutral-50"

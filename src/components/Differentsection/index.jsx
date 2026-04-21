@@ -231,9 +231,9 @@ export default function Services() {
                         <h2
                             className="font-myfont"
                             style={{
-                                fontSize: "clamp(2.4rem, 4.6vw, 4.5rem)",
+                                fontSize: "clamp(32px, 4.6vw, 4.5rem)",
                                 fontWeight: 500,
-                                lineHeight: 1.05,
+                                lineHeight: 1.1,
                                 letterSpacing: "-0.02em",
                                 color: "#111",
                                 margin: 0,
@@ -241,7 +241,8 @@ export default function Services() {
                                 alignItems: "center",
                                 justifyContent: "center",
                                 gap: "0.3em",
-                                flexWrap: "wrap"
+                                flexWrap: "wrap",
+                                textAlign: "center"
                             }}
                         >
                             <span>What Makes Ryleni</span>
@@ -258,7 +259,7 @@ export default function Services() {
                             className="font-myfont mx-auto"
                             style={{
                                 fontSize: 17,
-                                color: "#737373",
+                                color: "#6b7280",
                                 maxWidth: 600,
                                 lineHeight: 1.6,
                                 margin: 0,

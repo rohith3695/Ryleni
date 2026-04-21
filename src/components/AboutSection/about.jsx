@@ -1,4 +1,4 @@
-import { motion as Motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Aboutsection = () => {
     const fadeUp = {
@@ -15,8 +15,8 @@ const Aboutsection = () => {
             <div className="mx-auto max-w-6xl px-6">
                 <div className="grid items-start gap-14 md:grid-cols-12">
                     <div className="md:col-span-7">
-                        <Motion.h2
-                            className="font-myfont Bold m-0 max-w-full text-[clamp(2.4rem,4.6vw,4.25rem)] leading-[0.95] tracking-[-0.02em] text-neutral-900"
+                        <motion.h2
+                            className="font-myfont Bold m-0 max-w-full text-[clamp(32px,4.6vw,4.25rem)] leading-[0.95] tracking-[-0.02em] text-neutral-900"
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.7 }}
@@ -24,10 +24,10 @@ const Aboutsection = () => {
                             custom={0}
                         >
                             More than just capital.
-                        </Motion.h2>
+                        </motion.h2>
 
-                        <Motion.p
-                            className="mt-10 max-w-[60ch] whitespace-pre-line text-[16px] leading-relaxed text-neutral-800 md:text-[18px]"
+                        <motion.p
+                            className="mt-10 max-w-[60ch] whitespace-normal md:whitespace-pre-line text-[16px] leading-relaxed text-gray-500 md:text-[18px]"
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.6 }}
@@ -41,10 +41,10 @@ actively supports startups in fundraising by
 structuring financials, aligning them with the
 right investors, and participating in deal
 execution.`}
-                        </Motion.p>
+                        </motion.p>
 
-                        <Motion.p
-                            className="mt-8 max-w-[60ch] whitespace-pre-line text-[16px] leading-relaxed text-neutral-600 md:text-[18px]"
+                        <motion.p
+                            className="mt-8 max-w-[60ch] whitespace-normal md:whitespace-pre-line text-[16px] leading-relaxed text-gray-500 md:text-[18px]"
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true, amount: 0.6 }}
@@ -56,9 +56,9 @@ contributed across sectors, supporting
 product development, operational
 improvements, and capital access with a
 practical, results-driven approach.`}
-                        </Motion.p>
+                        </motion.p>
 
-                        <Motion.ul
+                        <motion.ul
                             className="mt-12 flex flex-col gap-4 text-neutral-800"
                             initial="hidden"
                             whileInView="show"
@@ -84,12 +84,12 @@ practical, results-driven approach.`}
                                 </svg>
                                 <span className="font-medium text-[16px] md:text-[18px]">Close a Series A within 6 months</span>
                             </li>
-                        </Motion.ul>
+                        </motion.ul>
                     </div>
 
                     <div className="md:col-span-5 md:mt-24">
                         <div className="flex flex-col gap-8">
-                            <Motion.div
+                            <motion.div
                                 className="relative overflow-hidden rounded-3xl bg-neutral-100"
                                 initial={{ opacity: 0, scale: 1.03 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -99,9 +99,9 @@ practical, results-driven approach.`}
                                 <div className="aspect-[3/4] w-full" />
                                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_30%_30%,rgba(79,70,229,0.22),transparent_60%),radial-gradient(60%_55%_at_70%_70%,rgba(17,24,39,0.10),transparent_55%)]" />
                                 <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5" />
-                            </Motion.div>
+                            </motion.div>
 
-                            <Motion.div
+                            <motion.div
                                 className="w-full flex justify-end"
                                 initial="hidden"
                                 whileInView="show"
@@ -112,7 +112,7 @@ practical, results-driven approach.`}
                                 <span className="font-myfont bold text-[clamp(2rem,4.6vw,4.25rem)] leading-[0.95] tracking-[0.02em] text-violet-600">
                                     We are co-builders.
                                 </span>
-                            </Motion.div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
