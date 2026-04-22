@@ -96,7 +96,11 @@ practical, results-driven approach.`}
                                 viewport={{ once: true, amount: 0.35 }}
                                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                             >
-                                <div className="aspect-[3/4] w-full" />
+                                <img 
+                                    src="/About.jpeg" 
+                                    alt="About Ryleni" 
+                                    className="w-full h-full object-cover"
+                                />
                                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_60%_at_30%_30%,rgba(79,70,229,0.22),transparent_60%),radial-gradient(60%_55%_at_70%_70%,rgba(17,24,39,0.10),transparent_55%)]" />
                                 <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-black/5" />
                             </motion.div>
