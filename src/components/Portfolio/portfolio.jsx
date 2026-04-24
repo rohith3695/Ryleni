@@ -123,7 +123,7 @@ const PortfolioContent = () => {
                     transition={{ ease: "easeOut", duration: 0.6, delay: 0.3 }}
                     className="mt-20 flex justify-center w-full"
                 >
-                    <PillButton label="View full portfolio" href="#" />
+                    <PillButton label="View full portfolio" href="/portfolio" />
                 </motion.div>
 
             </div>

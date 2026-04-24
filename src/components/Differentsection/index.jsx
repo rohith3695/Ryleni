@@ -9,39 +9,43 @@ const services = [
         number: "01",
         title: "Tailored Approach",
         description: "Every startup is unique. We design our engagement to match your specific goals, challenges, and market context.",
+        image: "/Homeserv/1.jpeg"
     },
     {
         number: "02",
         title: "Comprehensive Solutions",
         description: "We empower businesses to enhance operational efficiency, modernize their technology, and implement intelligent solutions that drive long-term performance.",
+        image: "/Homeserv/2.jpeg"
     },
     {
         number: "03",
         title: "Accessible for Startups",
         description: "Avoid steep upfront costs. Our flexible entry fees with subscription based model make professional support achievable for early-stage ventures.",
+        image: "/Homeserv/3.jpeg"
     },
     {
         number: "04",
         title: "Hands-On Execution",
         description: "We embed ourselves in your vision, translating ideas into tangible products and processes alongside your team, ensuring every step drives real impact.",
+        image: "/Homeserv/4.jpeg"
     },
     {
         number: "05",
         title: "Proven Founders",
         description: "Our team has built and scaled businesses themselves, bringing real world insights to help you succeed faster.",
+        image: "/Homeserv/5.jpeg"
     },
 ];
 
 const STICKY_TOP = 120;
 const CARD_STEP = 460;
 
-function MediaBlock({ number, imageY }) {
+function MediaBlock({ image, imageY }) {
     return (
         <div
             style={{
-                background: "rgba(255, 255, 255, 0.1)",
+                background: "rgba(255, 255, 255, 0.05)",
                 borderRadius: 20,
-                padding: 48,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -50,23 +54,17 @@ function MediaBlock({ number, imageY }) {
                 position: "relative",
             }}
         >
-            <motion.div
+            <motion.img
+                src={image}
+                alt="Service"
                 style={{
-                    fontSize: "12rem",
-                    fontWeight: 900,
-                    color: "rgba(255, 255, 255, 0.05)",
-                    letterSpacing: "-0.05em",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
                     y: imageY,
-                    userSelect: "none",
                 }}
-            >
-                <FontAwesomeIcon icon={fas[`fa${parseInt(number)}`]} />
-            </motion.div>
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-32 h-32 rounded-full border border-white/10 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-white/5" />
-                </div>
-            </div>
+            />
+            <div className="absolute inset-0 bg-black/10 pointer-events-none" />
         </div>
     );
 }
@@ -84,9 +82,9 @@ function ContentBlock({ service }) {
                     color: "#fff",
                 }}
             >
-                <FontAwesomeIcon 
-                    icon={fas[`fa${parseInt(service.number)}`]} 
-                    style={{ color: "rgb(255, 255, 255)" }} 
+                <FontAwesomeIcon
+                    icon={fas[`fa${parseInt(service.number)}`]}
+                    style={{ color: "rgb(255, 255, 255)" }}
                 />
             </span>
 
@@ -171,13 +169,13 @@ function ServiceCard({ service, index, total, scrolledPx }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-[48px] items-center min-h-0 md:min-h-[340px]">
                     {isEven ? (
                         <>
-                            <div className="hidden md:block"><MediaBlock number={service.number} imageY={imageY} /></div>
+                            <div className="hidden md:block"><MediaBlock image={service.image} imageY={imageY} /></div>
                             <ContentBlock service={service} />
                         </>
                     ) : (
                         <>
                             <ContentBlock service={service} />
-                            <div className="hidden md:block"><MediaBlock number={service.number} imageY={imageY} /></div>
+                            <div className="hidden md:block"><MediaBlock image={service.image} imageY={imageY} /></div>
                         </>
                     )}
                 </div>

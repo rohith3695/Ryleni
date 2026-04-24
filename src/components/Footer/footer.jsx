@@ -81,7 +81,7 @@ const Footer = () => {
                                 whileHover={{ opacity: 0.8 }}
                                 className="text-[#f1f0ee] text-[clamp(28px,4.5vw,72px)] font-instrument italic tracking-tighter border-b-[5px] border-[#f1f0ee] inline-block pb-0 w-fit leading-tight mt-1"
                             >
-                                hello@ryleni.com
+                                support@ryleni.in
                             </motion.a>
 
                             <div className="mt-16 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 font-myfont tracking-tight">

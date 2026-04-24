@@ -1,1 +1,134 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://svgstorm.com"
+viewBox = "0 0 117 89"
+width="117"
+height="89">
+<g fill="None" fill-opacity="0.0" stroke="#000000" stroke-opacity="0.00" stroke-width="0.3"><path d="
+M 0.00 89.00 
+L 117.00 89.00
+L 117.00 0.00
+L 0.00 0.00
+L 0.00 89.00
+M 14.00 66.00 
+C 12.14 54.53 11.36 37.34 14.00 26.00
+C 17.25 12.03 30.31 7.78 44.00 10.00 C 57.69 12.22 78.27 6.26 90.68 12.32 C 103.08 18.38 105.34 34.67 98.69 45.69 C 92.05 56.72 75.68 56.60 71.00 43.00
+C 81.95 45.49 91.23 38.87 89.00 28.00
+C 81.68 18.27 64.86 23.06 55.00 22.00 C 45.14 20.94 24.48 19.84 26.00 33.00 C 27.53 46.17 21.53 57.36 28.30 68.70 C 35.07 80.03 49.84 63.53 49.00 55.00
+C 53.08 57.49 55.22 61.31 59.00 64.00
+C 58.32 89.40 15.27 91.69 14.00 66.00
+M 73.00 52.00 
+C 74.32 52.96 75.16 53.62 76.00 55.00
+C 76.19 55.32 76.68 55.81 77.00 56.00
+C 78.40 56.85 78.95 58.01 80.00 59.00
+C 84.76 62.65 89.90 67.77 95.00 72.00
+C 96.21 73.01 97.31 73.51 98.00 75.00
+C 100.96 81.38 94.26 85.93 88.00 84.00
+C 84.38 76.69 75.89 74.44 70.92 68.08 C 65.95 61.72 58.16 59.51 53.30 52.70 C 48.44 45.88 37.93 45.21 37.01 35.99 C 36.09 26.77 51.36 29.19 55.25 36.75 C 59.14 44.31 68.68 45.93 73.00 52.00 Z"/>
+</g>
+<g fill="None" fill-opacity="0.0" stroke="#F7F7F7" stroke-opacity="0.93" stroke-width="0.3"><path d="
+M 14.00 26.00 
+C 12.58 38.68 13.31 53.25 14.00 66.00
+C 15.27 91.69 58.32 89.40 59.00 64.00
+C 55.22 61.31 53.08 57.49 49.00 55.00
+C 49.84 63.53 35.07 80.03 28.30 68.70 C 21.53 57.36 27.53 46.17 26.00 33.00 C 24.48 19.84 45.14 20.94 55.00 22.00 C 64.86 23.06 81.68 18.27 89.00 28.00
+C 91.23 38.87 81.95 45.49 71.00 43.00
+C 75.68 56.60 92.05 56.72 98.69 45.69 C 105.34 34.67 103.08 18.38 90.68 12.32 C 78.27 6.26 57.69 12.22 44.00 10.00 C 30.31 7.78 17.25 12.03 14.00 26.00 Z"/>
+</g>
+<g fill="None" fill-opacity="0.0" stroke="#676767" stroke-opacity="0.32" stroke-width="0.3"><path d="
+M 14.00 66.00 
+C 13.31 53.25 12.58 38.68 14.00 26.00
+C 11.36 37.34 12.14 54.53 14.00 66.00 Z"/>
+</g>
+<g fill="None" fill-opacity="0.0" stroke="#F6F6F6" stroke-opacity="0.91" stroke-width="0.3"><path d="
+M 98.00 75.00 
+C 97.62 74.37 95.56 72.57 95.00 72.00
+C 89.90 67.77 84.76 62.65 80.00 59.00
+C 78.72 58.02 77.99 57.17 77.00 56.00
+C 76.68 55.81 76.19 55.32 76.00 55.00
+C 74.93 54.10 73.94 52.84 73.00 52.00
+C 68.68 45.93 59.14 44.31 55.25 36.75 C 51.36 29.19 36.09 26.77 37.01 35.99 C 37.93 45.21 48.44 45.88 53.30 52.70 C 58.16 59.51 65.95 61.72 70.92 68.08 C 75.89 74.44 84.38 76.69 88.00 84.00
+C 94.26 85.93 100.96 81.38 98.00 75.00 Z"/>
+</g>
+<g fill="None" fill-opacity="0.0" stroke="#757575" stroke-opacity="0.15" stroke-width="0.3"><path d="
+M 76.00 55.00 
+C 75.16 53.62 74.32 52.96 73.00 52.00
+C 73.94 52.84 74.93 54.10 76.00 55.00 Z"/>
+</g>
+<g fill="None" fill-opacity="0.0" stroke="#777777" stroke-opacity="0.15" stroke-width="0.3"><path d="
+M 80.00 59.00 
+C 78.95 58.01 78.40 56.85 77.00 56.00
+C 77.99 57.17 78.72 58.02 80.00 59.00 Z"/>
+</g>
+<g fill="None" fill-opacity="0.0" stroke="#767676" stroke-opacity="0.20" stroke-width="0.3"><path d="
+M 98.00 75.00 
+C 97.31 73.51 96.21 73.01 95.00 72.00
+C 95.56 72.57 97.62 74.37 98.00 75.00 Z"/>
+</g>
+<g fill="#000000" fill-opacity="0.00" stroke="None">
+<path d="
+M 0.00 89.00 
+L 117.00 89.00
+L 117.00 0.00
+L 0.00 0.00
+L 0.00 89.00
+M 14.00 66.00 
+C 12.14 54.53 11.36 37.34 14.00 26.00
+C 17.25 12.03 30.31 7.78 44.00 10.00 C 57.69 12.22 78.27 6.26 90.68 12.32 C 103.08 18.38 105.34 34.67 98.69 45.69 C 92.05 56.72 75.68 56.60 71.00 43.00
+C 81.95 45.49 91.23 38.87 89.00 28.00
+C 81.68 18.27 64.86 23.06 55.00 22.00 C 45.14 20.94 24.48 19.84 26.00 33.00 C 27.53 46.17 21.53 57.36 28.30 68.70 C 35.07 80.03 49.84 63.53 49.00 55.00
+C 53.08 57.49 55.22 61.31 59.00 64.00
+C 58.32 89.40 15.27 91.69 14.00 66.00
+M 73.00 52.00 
+C 74.32 52.96 75.16 53.62 76.00 55.00
+C 76.19 55.32 76.68 55.81 77.00 56.00
+C 78.40 56.85 78.95 58.01 80.00 59.00
+C 84.76 62.65 89.90 67.77 95.00 72.00
+C 96.21 73.01 97.31 73.51 98.00 75.00
+C 100.96 81.38 94.26 85.93 88.00 84.00
+C 84.38 76.69 75.89 74.44 70.92 68.08 C 65.95 61.72 58.16 59.51 53.30 52.70 C 48.44 45.88 37.93 45.21 37.01 35.99 C 36.09 26.77 51.36 29.19 55.25 36.75 C 59.14 44.31 68.68 45.93 73.00 52.00 Z"/>
+</g>
+<g fill="#F7F7F7" fill-opacity="0.93" stroke="None">
+<path d="
+M 14.00 26.00 
+C 12.58 38.68 13.31 53.25 14.00 66.00
+C 15.27 91.69 58.32 89.40 59.00 64.00
+C 55.22 61.31 53.08 57.49 49.00 55.00
+C 49.84 63.53 35.07 80.03 28.30 68.70 C 21.53 57.36 27.53 46.17 26.00 33.00 C 24.48 19.84 45.14 20.94 55.00 22.00 C 64.86 23.06 81.68 18.27 89.00 28.00
+C 91.23 38.87 81.95 45.49 71.00 43.00
+C 75.68 56.60 92.05 56.72 98.69 45.69 C 105.34 34.67 103.08 18.38 90.68 12.32 C 78.27 6.26 57.69 12.22 44.00 10.00 C 30.31 7.78 17.25 12.03 14.00 26.00 Z"/>
+</g>
+<g fill="#676767" fill-opacity="0.32" stroke="None">
+<path d="
+M 14.00 66.00 
+C 13.31 53.25 12.58 38.68 14.00 26.00
+C 11.36 37.34 12.14 54.53 14.00 66.00 Z"/>
+</g>
+<g fill="#F6F6F6" fill-opacity="0.91" stroke="None">
+<path d="
+M 98.00 75.00 
+C 97.62 74.37 95.56 72.57 95.00 72.00
+C 89.90 67.77 84.76 62.65 80.00 59.00
+C 78.72 58.02 77.99 57.17 77.00 56.00
+C 76.68 55.81 76.19 55.32 76.00 55.00
+C 74.93 54.10 73.94 52.84 73.00 52.00
+C 68.68 45.93 59.14 44.31 55.25 36.75 C 51.36 29.19 36.09 26.77 37.01 35.99 C 37.93 45.21 48.44 45.88 53.30 52.70 C 58.16 59.51 65.95 61.72 70.92 68.08 C 75.89 74.44 84.38 76.69 88.00 84.00
+C 94.26 85.93 100.96 81.38 98.00 75.00 Z"/>
+</g>
+<g fill="#757575" fill-opacity="0.15" stroke="None">
+<path d="
+M 76.00 55.00 
+C 75.16 53.62 74.32 52.96 73.00 52.00
+C 73.94 52.84 74.93 54.10 76.00 55.00 Z"/>
+</g>
+<g fill="#777777" fill-opacity="0.15" stroke="None">
+<path d="
+M 80.00 59.00 
+C 78.95 58.01 78.40 56.85 77.00 56.00
+C 77.99 57.17 78.72 58.02 80.00 59.00 Z"/>
+</g>
+<g fill="#767676" fill-opacity="0.20" stroke="None">
+<path d="
+M 98.00 75.00 
+C 97.31 73.51 96.21 73.01 95.00 72.00
+C 95.56 72.57 97.62 74.37 98.00 75.00 Z"/>
+</g>
+</svg>

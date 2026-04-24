@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import PillButton from '../Pillbutton';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navLinks = [
-        { name: 'Services', href: '#' },
+        { name: 'Services', href: '/service' },
+        { name: 'Portfolio', href: '/portfolio' },
         { name: 'How It Works', href: '#' },
-        { name: 'Portfolio', href: '#' },
         { name: 'Careers', href: '#' },
         { name: 'Updates', href: '#' },
     ];
@@ -27,26 +28,26 @@ const Header = () => {
     return (
         <header className="relative w-full px-[18px] py-6 font-season z-[100]">
             <div className="mx-auto flex max-w-[1240px] items-center gap-[18px] rounded-full border border-neutral-200 bg-white px-[22px] py-[18px] shadow-[0_10px_24px_rgba(0,0,0,0.10)] max-[760px]:px-[14px] max-[760px]:py-[14px]">
-                <a className="flex items-center gap-[12px] whitespace-nowrap text-neutral-950 no-underline" href="/">
+                <Link className="flex items-center gap-[12px] whitespace-nowrap text-neutral-950 no-underline" to="/">
                     <img
                         src="/Logo.png"
                         alt="Ryleni Logo"
                         className="block h-[35px] md:h-[46px] w-auto shrink-0 object-contain"
                     />
-                </a>
+                </Link>
 
                 <nav
                     className="flex flex-1 items-center justify-end pr-5 gap-5 max-[760px]:hidden text-[16px]"
                     aria-label="Primary"
                 >
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
                             className="rounded-full px-3 py-[10px] text-neutral-800 no-underline transition hover:bg-neutral-100"
-                            href={link.href}
+                            to={link.href}
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -103,19 +104,19 @@ const Header = () => {
 
                                 <nav className="flex flex-col gap-6 font-myfont">
                                     {navLinks.map((link) => (
-                                        <a
+                                        <Link
                                             key={link.name}
-                                            href={link.href}
+                                            to={link.href}
                                             onClick={() => setIsOpen(false)}
                                             className="text-[22px] font-medium text-neutral-800 no-underline hover:text-violet-600 transition-colors"
                                         >
                                             {link.name}
-                                        </a>
+                                        </Link>
                                     ))}
                                 </nav>
 
                                 <div className="mt-auto pt-8 border-t border-neutral-100 text-center">
-                                    <PillButton label="Apply Now" href="#" isSmall={false} variantColor="#7c3aed" />
+                                    <PillButton label="Apply Now" href="/service" isSmall={false} variantColor="#7c3aed" />
                                 </div>
                             </div>
                         </motion.div>

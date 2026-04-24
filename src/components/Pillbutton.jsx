@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const PillButton = ({ label, href = "#", isSmall = false, variantColor = "#0e0e0e" }) => {
+    const isInternal = href.startsWith("/");
+
+    const Component = isInternal ? motion(Link) : motion.a;
+    const linkProps = isInternal ? { to: href } : { href };
+
     return (
-        <motion.a
-            href={href}
+        <Component
+            {...linkProps}
             whileHover="hover"
             style={{
                 position: "relative",
@@ -71,7 +77,7 @@ const PillButton = ({ label, href = "#", isSmall = false, variantColor = "#0e0e0
                     transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 />
             </motion.svg>
-        </motion.a>
+        </Component>
     );
 };
 
