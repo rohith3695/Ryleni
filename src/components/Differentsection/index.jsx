@@ -1,5 +1,5 @@
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform, useMotionValue, useMotionValueEvent } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import BlurText from "../BlurText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -186,23 +186,16 @@ function ServiceCard({ service, index, total, scrolledPx }) {
 
 export default function Services() {
     const containerRef = useRef(null);
+    const { scrollY } = useScroll();
     const scrolledPx = useMotionValue(0);
 
-    useEffect(() => {
-        let rafId;
-
-        const update = () => {
-            if (containerRef.current) {
-                const rect = containerRef.current.getBoundingClientRect();
-                const scrolled = Math.max(0, -rect.top);
-                scrolledPx.set(scrolled);
-            }
-            rafId = requestAnimationFrame(update);
-        };
-
-        rafId = requestAnimationFrame(update);
-        return () => cancelAnimationFrame(rafId);
-    }, [scrolledPx]);
+    useMotionValueEvent(scrollY, "change", () => {
+        if (containerRef.current) {
+            const rect = containerRef.current.getBoundingClientRect();
+            const scrolled = Math.max(0, -rect.top);
+            scrolledPx.set(scrolled);
+        }
+    });
 
     return (
         <section

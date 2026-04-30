@@ -51,8 +51,8 @@ const Header = () => {
                     ))}
                 </nav>
 
-                <div className="max-[760px]:hidden shrink-0">
-                    <PillButton label="Apply Now" href="#" isSmall={true} variantColor="#7c3aed" />
+                <div className="max-[200px]:hidden shrink-0 font-sans">
+                    <PillButton label="Apply Now" href="#" isSmall={true} />
                 </div>
 
                 <button
@@ -115,7 +115,7 @@ const Header = () => {
                                     ))}
                                 </nav>
 
-                                <div className="mt-auto pt-8 border-t border-neutral-100 text-center">
+                                <div className="mt-auto pt-8 border-t border-neutral-100 text-center font-sans">
                                     <PillButton label="Apply Now" href="/service" isSmall={false} variantColor="#7c3aed" />
                                 </div>
                             </div>

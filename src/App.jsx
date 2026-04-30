@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop"
 import Home from "./pages/Home"
 import Portfolio from "./pages/Portfolio"
 import Service from "./pages/Service"
+import Apply from "./pages/Apply"
 import "./index.css"
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/service" element={<Service />} />
+              <Route path="/apply" element={<Apply />} />
             </Routes>
           </div>
           <Footer />
