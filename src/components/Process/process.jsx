@@ -4,25 +4,25 @@ import PillButton from '../Pillbutton';
 const steps = [
     {
         number: '1',
-        icon: '/Process/Mask group.png',
+        icon: '/Process/apply.png',
         title: 'Apply',
         description: 'Share your thesis, early traction, and why now. We respond to every qualified application.'
     },
     {
         number: '2',
-        icon: '/Process/Mask group (1).png',
+        icon: '/Process/evaluation.png',
         title: 'Evaluation',
         description: 'We meet executives with partners to stress-test the market, model, and team complimentary.'
     },
     {
         number: '3',
-        icon: '/Process/Mask group (2).png',
+        icon: '/Process/build.png',
         title: 'Studio Build',
         description: 'Run a rapid-build program with dedicated product, design, and talent support.'
     },
     {
         number: '4',
-        icon: '/Process/Mask group (3).png',
+        icon: '/Process/scale.png',
         title: 'Launch & Scale',
         description: 'Raise follow-on capital, unlock our corporate network, and scale into new markets.'
     }

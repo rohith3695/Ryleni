@@ -57,7 +57,7 @@ const servicePillars = [
 const Service = () => {
     return (
         <div className="min-h-screen bg-white font-myfont overflow-hidden">
-            {/* Hero Section */}
+
             <section className="relative pt-32 pb-20 px-6 md:px-12 lg:px-24 dot-grid">
                 <div className="max-w-[1400px] mx-auto text-center flex flex-col items-center">
                     <motion.div
@@ -93,7 +93,7 @@ const Service = () => {
                 </div>
             </section>
 
-            {/* Service Pillars */}
+
             <section className="py-20 px-6 md:px-12 lg:px-24">
                 <div className="max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                     {servicePillars.map((pillar, index) => (
@@ -126,9 +126,9 @@ const Service = () => {
                 </div>
             </section>
 
-            {/* Application Section */}
+
             <section className="min-h-screen px-6 md:px-12 lg:px-24 bg-neutral-950 text-white relative overflow-hidden flex items-center justify-center">
-                {/* Background Image with Overlay */}
+
                 <div
                     className="absolute inset-0 z-0"
                     style={{

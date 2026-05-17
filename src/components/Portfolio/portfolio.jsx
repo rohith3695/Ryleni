@@ -5,22 +5,17 @@ import BlurText from '../BlurText';
 
 const projects = [
     {
-        tag: "SAAS",
-        title: "FlowTech",
+        title: "Aadha",
         description: "AI-powered investment platform for retail investors",
-        image: "/Portfolio/Rectangle 2636.png"
+        image: "/Portfolio/Aadha.jpeg",
+        fit: "cover"
     },
     {
-        tag: "HEALTHCARE",
-        title: "MedConnect",
+        title: "L2earn",
         description: "Telemedicine infrastructure for rural providers",
-        image: "/Portfolio/Rectangle 2680.png"
-    },
-    {
-        tag: "LOGISTICS",
-        title: "LogiChain",
-        description: "Supply chain optimize using AI",
-        image: "/Portfolio/Rectangle 2638.png"
+        image: "/Portfolio/l2earn.png",
+        fit: "contain",
+        bg: "bg-black"
     }
 ];
 
@@ -56,64 +51,81 @@ const PortfolioContent = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 group/grid">
                     {projects.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ ease: "easeOut", duration: 0.6, delay: index * 0.1 }}
-                            whileHover="hover"
-                            className="w-full flex flex-col bg-[#f0f5fc] rounded-[32px] cursor-pointer shadow-[0_4px_20px_rgb(0,0,0,0.03)] transition-all duration-500 overflow-hidden group-hover/grid:opacity-70 hover:!opacity-100 group hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)]"
-                        >
                             <motion.div
-                                variants={{ hover: { y: -6 } }}
-                                transition={{ ease: "easeOut", duration: 0.3 }}
-                                className="w-full flex flex-col h-full"
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ ease: "easeOut", duration: 0.6, delay: index * 0.1 }}
+                                whileHover="hover"
+                                className="w-full flex flex-col bg-[#f0f5fc] rounded-[32px] cursor-pointer shadow-[0_4px_20px_rgb(0,0,0,0.03)] transition-all duration-500 overflow-hidden group-hover/grid:opacity-70 hover:!opacity-100 group hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)]"
                             >
-                                <div className="relative w-full aspect-[4/3] overflow-hidden">
-                                    <motion.img
-                                        src={project.image}
-                                        alt={project.title}
-                                        variants={{ hover: { scale: 1.05 } }}
-                                        transition={{ ease: "easeOut", duration: 0.4 }}
-                                        className="w-full h-full object-cover bg-gray-200"
-                                    />
-                                    <motion.div
-                                        variants={{ hover: { opacity: 0.15 } }}
-                                        initial={{ opacity: 0 }}
-                                        transition={{ ease: "easeOut", duration: 0.3 }}
-                                        className="absolute inset-0 bg-black pointer-events-none"
-                                    />
-                                </div>
-
-                                <div className="p-8 pb-10 flex flex-col flex-grow relative overflow-hidden">
-                                    <motion.div
-                                        variants={{ hover: { y: 0 } }}
-                                        initial={{ y: 0 }}
-                                        className="flex flex-col h-full"
-                                    >
-                                        <span className="text-[#6563ff] font-myfont tracking-[0.05em] text-xs uppercase mb-3 drop-shadow-sm">
-                                            {project.tag}
-                                        </span>
-                                        <motion.h3
-                                            variants={{ hover: { y: -2 } }}
+                                <motion.div
+                                    variants={{ hover: { y: -6 } }}
+                                    transition={{ ease: "easeOut", duration: 0.3 }}
+                                    className="w-full flex flex-col h-full"
+                                >
+                                    <div className="relative w-full aspect-[4/3] overflow-hidden">
+                                        <motion.img
+                                            src={project.image}
+                                            alt={project.title}
+                                            variants={{ hover: { scale: 1.05 } }}
+                                            transition={{ ease: "easeOut", duration: 0.4 }}
+                                            className={`w-full h-full ${project.fit === 'contain' ? 'object-contain ' + (project.bg || 'bg-black') : 'object-cover bg-gray-200'}`}
+                                        />
+                                        <motion.div
+                                            variants={{ hover: { opacity: 0.15 } }}
+                                            initial={{ opacity: 0 }}
                                             transition={{ ease: "easeOut", duration: 0.3 }}
-                                            className="text-2xl text-gray-900 font-myfont tracking-tight mb-2"
+                                            className="absolute inset-0 bg-black pointer-events-none"
+                                        />
+                                    </div>
+    
+                                    <div className="p-8 pb-10 flex flex-col flex-grow relative overflow-hidden">
+                                        <motion.div
+                                            variants={{ hover: { y: 0 } }}
+                                            initial={{ y: 0 }}
+                                            className="flex flex-col h-full"
                                         >
-                                            {project.title}
-                                        </motion.h3>
-                                        <motion.p
-                                            variants={{ hover: { y: -2 } }}
-                                            transition={{ ease: "easeOut", duration: 0.3, delay: 0.05 }}
-                                            className="text-neutral-500 font-myfont items-start text-[14px] leading-snug"
-                                        >
-                                            {project.description}
-                                        </motion.p>
-                                    </motion.div>
-                                </div>
+                                            {project.tag && (
+                                                <span className="text-[#6563ff] font-myfont tracking-[0.05em] text-xs uppercase mb-3 drop-shadow-sm">
+                                                    {project.tag}
+                                                </span>
+                                            )}
+                                            <motion.h3
+                                                variants={{ hover: { y: -2 } }}
+                                                transition={{ ease: "easeOut", duration: 0.3 }}
+                                                className="text-2xl text-gray-900 font-myfont tracking-tight mb-2"
+                                            >
+                                                {project.title}
+                                            </motion.h3>
+                                            <motion.p
+                                                variants={{ hover: { y: -2 } }}
+                                                transition={{ ease: "easeOut", duration: 0.3, delay: 0.05 }}
+                                                className="text-neutral-500 font-myfont items-start text-[14px] leading-snug"
+                                            >
+                                                {project.description}
+                                            </motion.p>
+                                        </motion.div>
+                                    </div>
+                                </motion.div>
                             </motion.div>
-                        </motion.div>
                     ))}
+                    
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ ease: "easeOut", duration: 0.6, delay: 0.2 }}
+                        className="w-full h-full min-h-[350px] flex flex-col items-center justify-center bg-transparent p-8 text-center"
+                    >
+                        <h3 className="text-xl text-neutral-600 font-myfont mb-2">
+                            More Onboarding...
+                        </h3>
+                        <p className="text-sm text-neutral-400 font-myfont max-w-[200px]">
+                            New ventures are currently being incubated in our studio.
+                        </p>
+                    </motion.div>
                 </div>
 
                 <motion.div

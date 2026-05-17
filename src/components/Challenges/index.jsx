@@ -4,37 +4,37 @@ import BlurText from '../BlurText';
 
 const challengesData = [
     {
-        icon: "/Challenges/Mask group (4).png",
+        icon: "/Challenges/capital.png",
         title: "Securing Initial Capital",
         description: "Raising funds takes months of distraction from building the actual product.",
         isHighlighted: true
     },
     {
-        icon: "/Challenges/Mask group (5).png",
+        icon: "/Challenges/talent.png",
         title: "Finding the Right Talent",
         description: "Hiring top-tier engineering and design talent is competitive and expensive.",
         isHighlighted: false
     },
     {
-        icon: "/Challenges/Mask group (6).png",
+        icon: "/Challenges/execution.png",
         title: "Technical Execution",
         description: "Building scalable infrastructure and avoiding technical debt requires deep expertise.",
         isHighlighted: false
     },
     {
-        icon: "/Challenges/Mask group (7).png",
+        icon: "/Challenges/gtm.png",
         title: "Go-to-Market Strategy",
         description: "Getting the first 100 paying customers is often the hardest milestone.",
         isHighlighted: false
     },
     {
-        icon: "/Challenges/Mask group (8).png",
+        icon: "/Challenges/pmf.png",
         title: "Product-Market Fit",
         description: "Iterating quickly to find a product that the market actually wants.",
         isHighlighted: false
     },
     {
-        icon: "/Challenges/Mask group (9).png",
+        icon: "/Challenges/overhead.png",
         title: "Operational Overhead",
         description: "Dealing with legal, accounting and HR instead of focusing on growth.",
         isHighlighted: false
