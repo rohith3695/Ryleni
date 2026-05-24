@@ -59,14 +59,20 @@ const Footer = () => {
                         <div className="flex flex-col gap-8">
                             <h3 className="text-[#f1f0ee] text-3xl font-myfont tracking-tight">Follow us</h3>
                             <div className="flex flex-col gap-3">
-                                {['LinkedIn', 'Instagram', 'Twitter'].map((link) => (
+                                {[
+                                    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/ryleniofficial/' },
+                                    { name: 'Instagram', url: 'https://www.instagram.com/ryleniofficial?igsh=MWdpbTd1d3ZjOGlrYQ==' },
+                                    { name: 'Twitter', url: 'https://x.com/rylenioffl' }
+                                ].map((link) => (
                                     <motion.a
-                                        key={link}
-                                        href="#"
+                                        key={link.name}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         whileHover={{ x: 5, color: '#ffffff' }}
                                         className="text-[#d4d4d4] text-[20px] font-myfont leading-relaxed transition-all"
                                     >
-                                        {link}
+                                        {link.name}
                                     </motion.a>
                                 ))}
                             </div>
