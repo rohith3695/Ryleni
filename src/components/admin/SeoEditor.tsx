@@ -13,6 +13,7 @@ const PAGES = [
     { id: 'apply', name: 'Apply', path: '/apply' },
     { id: 'founder', name: 'Founder', path: '/founder' },
     { id: 'careers', name: 'Careers', path: '/careers' },
+    { id: 'collaboration', name: 'Collaboration', path: '/collaboration' },
 ];
 
 const SeoEditor = () => {
