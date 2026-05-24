@@ -2,40 +2,39 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import PillButton from '../components/Pillbutton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faEnvelope, faPhone, faBriefcase, faBuilding, faTag, faLink } from '@fortawesome/free-solid-svg-icons';
-import { InputField, SelectField, IndustriesField } from '../components/FormFields';
+import { faUser, faEnvelope, faPhone, faLink, faBullseye, faShieldHalved, faAlignLeft, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { InputField, TextareaField, SelectField, FileUploadField } from '../components/FormFields';
 
-const Apply = () => {
+const Collaboration = () => {
     const [formData, setFormData] = useState({
-        fullName: '',
-        investmentPortfolio: '',
-        minTicketSize: '',
-        maxTicketSize: '',
+        whoPerson: '',
+        purpose: '',
+        businessProof: '',
+        offeringSummary: '',
         entityType: '',
-        linkedinId: '',
         contactNumber: '',
         mailId: '',
+        linkedinId: '',
     });
-    const [industries, setIndustries] = useState([]);
+    const [proposalFile, setProposalFile] = useState(null);
     const [touched, setTouched] = useState(false);
 
-    const field = (key, type = 'text') => ({
+    const field = (key) => ({
         value: formData[key],
         onChange: (e) => setFormData((p) => ({ ...p, [key]: e.target.value })),
         error: touched && !formData[key].trim(),
-        type,
     });
 
     const isValid =
-        formData.fullName.trim() &&
-        formData.investmentPortfolio.trim() &&
-        formData.minTicketSize.trim() &&
-        formData.maxTicketSize.trim() &&
+        formData.whoPerson.trim() &&
+        formData.purpose.trim() &&
+        formData.businessProof.trim() &&
+        formData.offeringSummary.trim() &&
         formData.entityType !== '' &&
-        industries.length > 0 &&
-        formData.linkedinId.trim() &&
+        proposalFile !== null &&
         formData.contactNumber.trim() &&
-        formData.mailId.trim();
+        formData.mailId.trim() &&
+        formData.linkedinId.trim();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -49,34 +48,35 @@ const Apply = () => {
                 <div className="absolute inset-0 z-0">
                     <img
                         src="/funding_hero_bg_1777045310106.png"
-                        alt="Apply Hero"
+                        alt="Collaboration Hero"
                         className="w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-neutral-950/60" />
+                    <div className="absolute inset-0 bg-neutral-950/65" />
                 </div>
 
                 <div className="relative z-10 text-center px-6 pt-12">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-sm font-bold tracking-[0.2em] text-violet-400 uppercase mb-4"
+                        className="text-sm font-bold tracking-[0.2em] text-violet-400 uppercase mb-4 font-myfont"
                     >
-                        INVESTORS
+                        PARTNERSHIPS
                     </motion.div>
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
                         className="text-[clamp(32px,5vw,4.5rem)] font-season text-white leading-[1.1] mb-4"
                     >
-                        Register as <span className='font-instrument text-violet-400'>Investor</span>
+                        Let's <span className="font-instrument italic text-violet-400">Collaborate</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
+                        transition={{ delay: 0.2 }}
                         className="text-white/80 font-myfont text-lg md:text-xl max-w-[600px] mx-auto"
                     >
-                        Co-invest in studio-built ventures with conviction.
+                        Bring your proposal,let's build something meaningful together.
                     </motion.p>
                 </div>
             </section>
@@ -87,32 +87,34 @@ const Apply = () => {
 
                     <InputField
                         icon={faUser}
-                        label="Full Name"
-                        placeholder="John Doe"
-                        {...field('fullName')}
+                        label="Who is the Person"
+                        placeholder="Your full name or company representative"
+                        {...field('whoPerson')}
                     />
 
-                    <InputField
-                        icon={faBriefcase}
-                        label="Investment Portfolio"
-                        placeholder="Describe your portfolio or notable investments"
-                        {...field('investmentPortfolio')}
+                    <TextareaField
+                        icon={faBullseye}
+                        label="What is the Purpose"
+                        placeholder="Describe the purpose of this collaboration..."
+                        rows={4}
+                        {...field('purpose')}
                     />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <InputField
-                            icon={faTag}
-                            label="Minimum Ticket Size"
-                            placeholder="e.g. ₹10 Lakhs"
-                            {...field('minTicketSize')}
-                        />
-                        <InputField
-                            icon={faTag}
-                            label="Maximum Ticket Size"
-                            placeholder="e.g. ₹5 Crores"
-                            {...field('maxTicketSize')}
-                        />
-                    </div>
+                    <TextareaField
+                        icon={faShieldHalved}
+                        label="Business Proof"
+                        placeholder="Share verifiable proof of your business — registrations, existing clients, traction..."
+                        rows={3}
+                        {...field('businessProof')}
+                    />
+
+                    <TextareaField
+                        icon={faAlignLeft}
+                        label="One Line Summary of What You're Offering"
+                        placeholder="Summarise your offering in one clear sentence..."
+                        rows={2}
+                        {...field('offeringSummary')}
+                    />
 
                     <SelectField
                         icon={faBuilding}
@@ -123,25 +125,20 @@ const Apply = () => {
                         options={[
                             { value: '', label: 'Select type' },
                             { value: 'individual', label: 'Individual' },
-                            { value: 'family-office', label: 'Family Office' },
-                            { value: 'venture-fund', label: 'Venture Fund' },
-                            { value: 'corporate', label: 'Corporate / Strategic' },
-                            { value: 'angel-network', label: 'Angel Network' },
+                            { value: 'startup', label: 'Startup' },
+                            { value: 'agency', label: 'Agency' },
+                            { value: 'corporate', label: 'Corporate' },
+                            { value: 'ngo', label: 'NGO / Non-profit' },
+                            { value: 'other', label: 'Other' },
                         ]}
                     />
 
-                    <IndustriesField
-                        tags={industries}
-                        setTags={setIndustries}
-                        error={touched && industries.length === 0}
-                    />
-
-                    <InputField
-                        icon={faLink}
-                        label="LinkedIn Id"
-                        placeholder="linkedin.com/in/yourprofile"
-                        type="url"
-                        {...field('linkedinId')}
+                    <FileUploadField
+                        label="Upload Section for the Proposal"
+                        accept=".pdf,.ppt,.pptx,.doc,.docx"
+                        value={proposalFile}
+                        onChange={(e) => setProposalFile(e.target.files[0] || null)}
+                        error={touched && proposalFile === null}
                     />
 
                     <InputField
@@ -155,13 +152,21 @@ const Apply = () => {
                     <InputField
                         icon={faEnvelope}
                         label="Mail Id"
-                        placeholder="you@email.com"
+                        placeholder="you@company.com"
                         type="email"
                         {...field('mailId')}
                     />
 
+                    <InputField
+                        icon={faLink}
+                        label="LinkedIn Id of the User / Company"
+                        placeholder="linkedin.com/in/yourprofile or linkedin.com/company/..."
+                        type="url"
+                        {...field('linkedinId')}
+                    />
+
                     <div className="pt-8 flex flex-col items-center gap-4">
-                        <PillButton label="SUBMIT APPLICATION" href="#" />
+                        <PillButton label="Submit Proposal" href="#" />
                         <p className="text-neutral-400 font-myfont text-sm">
                             Secure 256-bit encrypted transmission.
                         </p>
@@ -172,4 +177,4 @@ const Apply = () => {
     );
 };
 
-export default Apply;
+export default Collaboration;

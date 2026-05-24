@@ -9,6 +9,7 @@ import Service from "./pages/Service"
 import Apply from "./pages/Apply"
 import Founder from "./pages/Founder"
 import Careers from "./pages/Careers"
+import Collaboration from "./pages/Collaboration"
 import "./index.css"
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
               <Route path="/apply" element={<Apply />} />
               <Route path="/founder" element={<Founder />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/collaboration" element={<Collaboration />} />
             </Routes>
           </div>
           <Footer />

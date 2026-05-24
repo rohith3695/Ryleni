@@ -28,7 +28,7 @@ const Herosection = () => {
                     <div className="mx-auto flex items-center justify-center gap-4 flex-wrap">
                         <PillButton label="Apply as a Founder" href="/founder" />
                         <PillButton label="Investor Registration" href="/apply" />
-                        <PillButton label="Brochure" href="#" />
+                        <PillButton label="Collaboration" href="/collaboration" />
                     </div>
                 </div>
             </div>

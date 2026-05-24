@@ -159,7 +159,7 @@ const Service = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-neutral-400 text-lg md:text-xl max-w-[600px] mb-12 font-myfont"
                     >
-                        Join the Ryleni ecosystem and turn your vision into reality.Apply now and let's discuss how we can help accelerate your venture.
+                        Join the Ryleni ecosystem and turn your vision into reality. Apply now and let's discuss how we can help accelerate your venture.
                     </motion.p>
 
                     <PillButton label="Apply Now" href="mailto:support@ryleni.in" />
