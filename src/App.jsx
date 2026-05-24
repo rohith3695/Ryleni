@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import SmoothScroll from "./components/SmoothScroll"
 import Header from "./components/Header/header"
 import Footer from "./components/Footer/footer"
@@ -10,11 +10,22 @@ import Apply from "./pages/Apply"
 import Founder from "./pages/Founder"
 import Careers from "./pages/Careers"
 import Collaboration from "./pages/Collaboration"
+import Admin from "./pages/Admin"
 import "./index.css"
 
-function App() {
+function AppContent() {
+  const location = useLocation();
+  const isAdmin = location.pathname.startsWith('/admin');
+
+  if (isAdmin) {
+    return (
+      <Routes>
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    );
+  }
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <SmoothScroll>
         <div className="smooth-content">
@@ -33,6 +44,14 @@ function App() {
           <Footer />
         </div>
       </SmoothScroll>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
