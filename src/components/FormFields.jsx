@@ -85,7 +85,7 @@ export const SelectField = ({ icon, label, options, value, onChange, error, opti
     </div>
 );
 
-export const FileUploadField = ({ label, accept, value, onChange, error, required, optional }) => (
+export const FileUploadField = ({ label, accept, hint = 'PDF, PNG, JPG up to 10MB', value, onChange, error, required, optional }) => (
     <div className="flex flex-col gap-2.5 w-full">
         <label className="text-[12px] font-myfont font-bold tracking-[0.18em] text-neutral-500 uppercase">
             {label}
@@ -103,7 +103,7 @@ export const FileUploadField = ({ label, accept, value, onChange, error, require
                     {value ? value.name : 'Click to upload'}
                 </p>
                 <p className="text-neutral-400 font-myfont text-[13px] mt-0.5">
-                    {value ? `${(value.size / 1024).toFixed(1)} KB` : 'PDF, PNG, JPG up to 10MB'}
+                    {value ? `${(value.size / 1024).toFixed(1)} KB` : hint}
                 </p>
             </div>
             <input type="file" accept={accept} className="hidden" onChange={onChange} />

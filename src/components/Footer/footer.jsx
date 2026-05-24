@@ -83,18 +83,18 @@ const Footer = () => {
                             >
                                 support@ryleni.in
                             </motion.a>
-
-                            <div className="mt-16 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 font-myfont tracking-tight">
-                                <p className="text-[#f1f0ee] text-[14px] opacity-100">© 2026 Ventures Studio. All rights reserved.</p>
-                                <span className="hidden md:inline text-[#f1f0ee] opacity-30 text-[12px]">|</span>
-                                <div className="flex items-center gap-4 md:gap-6 flex-wrap">
-                                    <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Privacy Policy</a>
-                                    <span className="text-[#f1f0ee] opacity-30 text-[12px]">|</span>
-                                    <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Terms of Service</a>
-                                </div>
-                            </div>
                         </div>
                     </FadeUp>
+                </div>
+
+                <div className="max-w-[1600px] mx-auto w-full relative z-10 mt-16 flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-6 font-myfont tracking-tight">
+                    <p className="text-[#f1f0ee] text-[14px]">© 2026 Ventures Studio. All rights reserved.</p>
+                    <span className="hidden md:inline text-[#f1f0ee] opacity-30 text-[12px]">|</span>
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Privacy Policy</a>
+                        <span className="text-[#f1f0ee] opacity-30 text-[12px]">|</span>
+                        <a href="#" className="text-[#f1f0ee] text-[14px] opacity-80 hover:opacity-100 transition-opacity">Terms of Service</a>
+                    </div>
                 </div>
 
                 <div className="absolute inset-x-0 bottom-0 flex items-end justify-start pointer-events-none select-none overflow-hidden z-0 opacity-[0.04] md:opacity-100">

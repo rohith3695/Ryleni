@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import PillButton from '../components/Pillbutton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faPhone, faBriefcase, faBuilding, faTag, faLink } from '@fortawesome/free-solid-svg-icons';
-import { InputField, SelectField, IndustriesField } from '../components/FormFields';
+import { InputField, TextareaField, SelectField, IndustriesField, FileUploadField } from '../components/FormFields';
 
 const Apply = () => {
     const [formData, setFormData] = useState({
         fullName: '',
-        investmentPortfolio: '',
+        about: '',
         minTicketSize: '',
         maxTicketSize: '',
         entityType: '',
@@ -16,6 +16,7 @@ const Apply = () => {
         contactNumber: '',
         mailId: '',
     });
+    const [portfolioFile, setPortfolioFile] = useState(null);
     const [industries, setIndustries] = useState([]);
     const [touched, setTouched] = useState(false);
 
@@ -28,7 +29,7 @@ const Apply = () => {
 
     const isValid =
         formData.fullName.trim() &&
-        formData.investmentPortfolio.trim() &&
+        formData.about.trim() &&
         formData.minTicketSize.trim() &&
         formData.maxTicketSize.trim() &&
         formData.entityType !== '' &&
@@ -92,11 +93,22 @@ const Apply = () => {
                         {...field('fullName')}
                     />
 
-                    <InputField
+                    <TextareaField
                         icon={faBriefcase}
-                        label="Investment Portfolio"
-                        placeholder="Describe your portfolio or notable investments"
-                        {...field('investmentPortfolio')}
+                        label="About"
+                        placeholder="Tell us about yourself and your investment background..."
+                        rows={3}
+                        {...field('about')}
+                    />
+
+                    <FileUploadField
+                        label="Investor Portfolio"
+                        accept=".pdf,.doc,.docx"
+                        hint="PDF / DOC / DOCX"
+                        value={portfolioFile}
+                        onChange={(e) => setPortfolioFile(e.target.files[0] || null)}
+                        error={false}
+                        optional
                     />
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
