@@ -11,6 +11,7 @@ import Founder from "./pages/Founder"
 import Careers from "./pages/Careers"
 import Collaboration from "./pages/Collaboration"
 import Admin from "./pages/Admin"
+import Updates from "./pages/Updates"
 import "./index.css"
 
 function AppContent() {
@@ -39,6 +40,7 @@ function AppContent() {
               <Route path="/founder" element={<Founder />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/collaboration" element={<Collaboration />} />
+              <Route path="/updates" element={<Updates />} />
             </Routes>
           </div>
           <Footer />

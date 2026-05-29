@@ -16,6 +16,13 @@ const projects = [
         image: "/Portfolio/l2earn.png",
         fit: "contain",
         bg: "bg-black"
+    },
+    {
+        title: "Evcare",
+        description: "Electric vehicle charging and maintenance solutions",
+        image: "/Portfolio/evcare.png",
+        fit: "contain",
+        bg: "bg-black"
     }
 ];
 
@@ -111,21 +118,7 @@ const PortfolioContent = () => {
                                 </motion.div>
                             </motion.div>
                     ))}
-                    
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ ease: "easeOut", duration: 0.6, delay: 0.2 }}
-                        className="w-full h-full min-h-[350px] flex flex-col items-center justify-center bg-transparent p-8 text-center"
-                    >
-                        <h3 className="text-xl text-neutral-600 font-myfont mb-2">
-                            More Onboarding...
-                        </h3>
-                        <p className="text-sm text-neutral-400 font-myfont max-w-[200px]">
-                            New ventures are currently being incubated in our studio.
-                        </p>
-                    </motion.div>
+
                 </div>
 
                 <motion.div

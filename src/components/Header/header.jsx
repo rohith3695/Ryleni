@@ -11,7 +11,7 @@ const Header = () => {
         { name: 'Portfolio', href: '/portfolio' },
         { name: 'How It Works', href: '#' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Updates', href: '#' },
+        { name: 'Updates', href: '/updates' },
     ];
 
     useEffect(() => {

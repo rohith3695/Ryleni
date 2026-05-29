@@ -19,7 +19,15 @@ const SmoothScroll = ({ children }) => {
     }
     animationFrameId = requestAnimationFrame(raf)
 
+    const resizeObserver = new ResizeObserver(() => {
+      lenis.resize()
+    })
+
+    const rootElement = document.getElementById('root') || document.body
+    resizeObserver.observe(rootElement)
+
     return () => {
+      resizeObserver.disconnect()
       cancelAnimationFrame(animationFrameId)
       lenis.destroy()
     }
